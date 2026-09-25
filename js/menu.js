@@ -2,7 +2,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const header = document.querySelector('.site-header');
     if (!header) return;
 
-    const pagePrefix = window.location.pathname.includes('/prodotti/') ? '../' : '';
+    const isProductPage = /\/prodotti\/[^/]+\.html$/i.test(window.location.pathname);
+    const pagePrefix = isProductPage ? '../' : '';
 
     const navHTML = `
     <nav class="site-nav">
