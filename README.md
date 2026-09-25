@@ -1,23 +1,23 @@
-# Righi Germano S.n.c. - Sito Vetrina Ufficiale
+# Righi Germano S.n.c. - Official Showcase Website
 
-Sito web ufficiale della ditta **Righi Germano S.n.c.** (attiva dal 1900 a Boretto, RE), specializzata nella produzione artigianale di manufatti prefabbricati in cemento e lavorazioni in graniglia di marmo.
+Official website of the company **Righi Germano S.n.c.** (active since 1900 in Boretto, RE, Italy), specialized in the artisanal production of precast concrete elements and marble grit processing.
 
-## 🛠️ Struttura del Progetto
-Il sito è sviluppato con un'architettura modulare in HTML5, CSS3 e JavaScript puro (Vanilla JS), ospitato su GitHub Pages.
+## 🛠️ Project Structure
+The website is developed using a modular architecture in HTML5, CSS3, and Vanilla JavaScript, hosted on GitHub Pages.
 
-- `index.html` - Homepage del sito
-- `catalogo.html` - Pagina dei prodotti e delle lavorazioni
-- `ciclo-produttivo.html` - Approfondimento sui materiali e le fasi produttive
-- `css/` - Fogli di stile personalizzati (`style.css`)
-- `js/` - Script modulari per la gestione dinamica di menu, sidebar, footer e banner cookie (`menu.js`, `sidebar.js`, `footer.js`)
-- `img/` - Risorse visive suddivise per categorie (`loghi/`, `ciclo-produttivo/`, `prodotti/`, ecc.)
+- `index.html` - Homepage of the website
+- `catalogo.html` - Products and manufacturing page
+- `ciclo-produttivo.html` - Deep dive into materials and production phases
+- `css/` - Custom stylesheets (`style.css`)
+- `js/` - Modular scripts for the dynamic management of menu, sidebar, footer, and cookie banner (`menu.js`, `sidebar.js`, `footer.js`)
+- `img/` - Visual assets organized into categories (`loghi/`, `ciclo-produttivo/`, `prodotti/`, etc.)
 
-## 🚀 Funzionalità Implementate
-- **Design Responsive:** Ottimizzato per la visualizzazione da desktop, tablet e smartphone.
-- **Lightbox Interattivo:** Integrazione di GLightbox per ingrandire le foto delle lavorazioni e dei prodotti senza perdita di dettagli.
-- **Modularità JavaScript:** Header, footer e menu vengono richiamati dinamicamente per facilitare la manutenzione del codice.
-- **Gestione Cookie:** Banner informativo con memorizzazione della scelta tramite `sessionStorage`.
-- **Branding Multi-dispositivo:** Favicon e configurazioni avanzate generate tramite RealFaviconGenerator.
+## 🚀 Implemented Features
+- **Responsive Design:** Optimized for desktops, tablets, and smartphones.
+- **Interactive Lightbox:** Integration of GLightbox to enlarge photos of manufacturing processes and products without losing details.
+- **JavaScript Modularity:** Header, footer, and menu are dynamically injected to simplify code maintenance.
+- **Cookie Management:** Informative banner with choice retention via `sessionStorage`.
+- **Multi-device Branding:** Favicons and advanced web configurations generated via RealFaviconGenerator.
 
-## 📄 Licenza
-Tutti i diritti riservati © 2026 Righi Germano S.n.c.
+## 📄 License
+All rights reserved © 2026 Righi Germano S.n.c.
