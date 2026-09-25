@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 <li><a href="index.html">Home</a></li>
                 <li><a href="storia.html">La Nostra Storia</a></li>
                 <li><a href="ciclo-produttivo.html">Il Ciclo Produttivo</a></li>
-                <li><a href="#">Prodotti</a></li>
-                <li><a href="#">Contattaci</a></li>
+                <li><a href="prodotti.html">Prodotti</a></li>
+                <li><a href="contatti.html">Contattaci</a></li>
             </ul>
         </div>
     </nav>

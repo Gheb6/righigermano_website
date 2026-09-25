@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Nostra Storia - Righi Germano S.n.c.</title>
     <meta name="description" content="Scopri la storia della famiglia Righi a Boretto: quattro generazioni dedicate alla lavorazione artistica e ai prefabbricati in cemento dal 1900.">
-    <link rel="icon" type="image/png" href="img/logo.png">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="loghi/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="loghi/favicon.svg">
+    <link rel="shortcut icon" href="loghi/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="loghi/apple-touch-icon.png">
+    <link rel="manifest" href="loghi/site.webmanifest">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
 </head>
 <body>
 
@@ -36,8 +42,29 @@
             
             <!-- Inserimento della foto storica del 1948 -->
             <div class="history-photo-box">
-                <img src="img/guido-righi.jpg" alt="Guido Righi - Luglio 1948" class="history-img">
+                <a href="img/guido-righi.jpg" class="glightbox-history" data-title="Guido Righi - Luglio 1948">
+                    <img src="img/guido-righi.jpg" alt="Guido Righi - Luglio 1948" class="history-img">
+                </a>
                 <p class="photo-caption">Guido Righi - Luglio 1948</p>
+            </div>
+
+            <h2 id="onoreficenze">Onorificenze e riconoscimenti</h2>
+            <p class="honor-event"><strong>Esposizione Mostra Campionaria</strong><br>Firenze, 10-24 novembre 1929</p>
+            <p>La qualità del lavoro e la passione per l'arte del cemento hanno accompagnato la famiglia Righi anche in importanti occasioni espositive.</p>
+
+            <div class="honors-grid">
+                <figure class="honor-card">
+                    <a href="img/onoreficenze/diploma-gran-premio.webp" class="glightbox-honors" data-title="Diploma di Gran Premio e Medaglia d'Oro">
+                        <img src="img/onoreficenze/diploma-gran-premio.webp" alt="Diploma di Gran Premio e Medaglia d'Oro">
+                    </a>
+                    <figcaption>Diploma di Gran Premio e Medaglia d'Oro</figcaption>
+                </figure>
+                <figure class="honor-card">
+                    <a href="img/onoreficenze/croce-diploma-giuri-onore.webp" class="glightbox-honors" data-title="Croce e Diploma di membro del Giuri d'Onore">
+                        <img src="img/onoreficenze/croce-diploma-giuri-onore.webp" alt="Croce e Diploma di membro del Giuri d'Onore">
+                    </a>
+                    <figcaption>Croce e Diploma di membro del Giuri d'Onore</figcaption>
+                </figure>
             </div>
 
             <p>Oggi la tradizione continua con i fratelli <strong>P.I. Massimo</strong> e <strong>Geom. Giorgio Righi</strong>, nuovi esponenti di questa longeva attività artigianale. L'azienda opera all'interno di un'area produttiva di 10.000 mq situata nella zona industriale di Boretto (RE).</p>
@@ -54,5 +81,24 @@
     <script src="js/menu.js"></script>
     <script src="js/sidebar.js"></script>
     <script src="js/footer.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+        GLightbox({
+            selector: '.glightbox-history',
+            zoomable: true,
+            openEffect: 'zoom',
+            closeEffect: 'zoom'
+        });
+
+        GLightbox({
+            selector: '.glightbox-honors',
+            touchNavigation: true,
+            loop: true,
+            zoomable: true,
+            openEffect: 'zoom',
+            closeEffect: 'zoom'
+        });
+    </script>
 </body>
 </html>
