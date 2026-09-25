@@ -41,12 +41,15 @@ body {
     gap: 10px;
 }
 
+/* Stile per la foto del fondatore in formato rettangolare orizzontale */
 .founder-img {
-    width: 90px;
-    height: 90px;
+    width: 100%;
+    max-width: 220px;       /* Imposta la larghezza massima desiderata su PC */
+    height: auto;           /* Mantiene le proporzioni originali della foto */
     object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid #ccc;
+    border-radius: 6px;     /* Angoli leggermente arrotondati, moderni */
+    border: 2px solid #ccc; /* Un bordo sottile ed elegante */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .site-header h1 {
@@ -283,4 +286,61 @@ body {
         justify-content: space-between;
         text-align: left;
     }
+}
+
+/* Stile per la foto storica all'interno della pagina Storia */
+.history-photo-box {
+    text-align: center;
+    margin: 25px 0;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 6px;
+    border: 1px solid #eee;
+}
+
+.history-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.photo-caption {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/* --- AFFINAMENTI DI STILE --- */
+
+/* 1. Dà più respiro tra il logo in alto e il menu di navigazione */
+.site-header {
+    padding-bottom: 25px;
+}
+
+/* 2. Migliora la leggibilità del testo principale (interlinea più comoda) */
+.content-body p {
+    line-height: 1.75;
+    margin-bottom: 15px;
+}
+
+/* 3. Rende i pulsanti laterali più interattivi al tocco */
+.btn {
+    transform: translateY(0);
+    transition: transform 0.1s ease, background-color 0.2s ease;
+}
+
+.btn:active {
+    transform: scale(0.98); /* Effetto "pressione" del dito sullo smartphone */
+}
+
+/* 4. Sistema la spaziatura della didascalia sotto la foto storica */
+.photo-caption {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 10px;
+    font-style: italic;
+    font-weight: 500;
 }
