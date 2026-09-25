@@ -776,8 +776,10 @@ body {
     }
 
     .catalog-card img {
-        aspect-ratio: 16 / 9;
-    }
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
 
     .catalog-card-content {
         padding: 14px;
