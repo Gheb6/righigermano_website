@@ -29,19 +29,6 @@
         </div>
     </header>
 
-    <!-- Menu di navigazione -->
-    <nav class="site-nav">
-        <div class="container">
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="storia.html">La Nostra Storia</a></li>
-                <li><a href="#">Prodotti</a></li>
-                <li><a href="#">Lavori Speciali</a></li>
-                <li><a href="#">Contattaci</a></li>
-            </ul>
-        </div>
-    </nav>
-
     <!-- Contenuto Principale -->
     <main class="container main-content">
         
@@ -65,48 +52,7 @@
             </ul>
         </section>
 
-        <!-- Sezione Laterale / Contatti e Pulsanti Rapidi -->
-        <aside class="sidebar">
-            <div class="card info-card">
-                <h3>Righi Germano S.n.c.</h3>
-                <p><strong>di Righi Massimo e Giorgio</strong></p>
-                <p>V. Pasubio 14/16/18<br>BORETTO (RE)</p>
-                
-                <!-- Pulsante Google Maps -->
-                <a href="https://maps.app.goo.gl/W6F3cEfQGFLqUn2TA" target="_blank" class="btn btn-map">
-                    📍 Apri in Google Maps
-                </a>
-
-                <hr>
-                <p><strong>Cod. Fisc. e P.I.</strong><br>01560280354</p>
-                <p><strong>Fax</strong> 0522 964845</p>
-                
-                <!-- Pulsanti di chiamata e invio email rapidi -->
-                <div class="quick-actions">
-                    <a href="tel:0522965015" class="btn btn-call">📞 Chiama 0522 965015</a>
-                    <a href="mailto:info@righigermano.com" class="btn btn-email">✉️ Invia Email</a>
-                </div>
-
-                <p style="margin-top: 15px; font-size: 0.85rem;"><strong>PEC:</strong> <a href="mailto:righigermano@pec.it">righigermano@pec.it</a></p>
-            </div>
-        </aside>
-
     </main>
-
-    <!-- Banner Informativa Cookie (Obbligatorio) -->
-    <div id="cookie-banner" class="cookie-banner">
-        <div class="container cookie-content">
-            <p>Questo sito utilizza solo cookie tecnici per garantire il corretto funzionamento della navigazione. <a href="privacy.html" target="_blank">Leggi l'informativa</a></p>
-            <button id="accept-cookies" class="btn-accept">Ho capito</button>
-        </div>
-    </div>
-
-    <!-- Piè di pagina -->
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2026 Righi Germano S.n.c. - Tutti i diritti riservati | <a href="privacy.html" style="color: #aaa; text-decoration: underline;">Privacy & Cookie Policy</a></p>
-        </div>
-    </footer>
 
     <!-- Piccolo script per chiudere il banner cookie con un click -->
     <script>
@@ -114,6 +60,9 @@
             document.getElementById('cookie-banner').style.display = 'none';
         });
     </script>
+    <script src="js/menu.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/footer.js"></script>
 
 </body>
 </html>
