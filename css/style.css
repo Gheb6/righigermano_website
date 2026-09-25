@@ -383,3 +383,17 @@ body {
         gap: 15px;
     }
 }
+
+/* Rimuove la didascalia solo nel lightbox/carousel, lasciando la caption normale sotto le foto */
+.glightbox-container .gdesc-inner,
+.glightbox-container .gslide-description,
+.glightbox-container .gslide-title {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+}
