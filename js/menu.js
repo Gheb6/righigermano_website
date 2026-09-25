@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
+    const header = document.querySelector('.site-header');
+    if (!header) return;
+
     const navHTML = `
     <nav class="site-nav">
         <div class="container">
@@ -12,7 +15,8 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
     </nav>
     `;
-    
-    // Inserisce il menu subito dopo l'header in qualsiasi pagina
-    document.querySelector('.site-header').insertAdjacentHTML('afterend', navHTML);
+
+    if (!header.nextElementSibling || !header.nextElementSibling.classList.contains('site-nav')) {
+        header.insertAdjacentHTML('afterend', navHTML);
+    }
 });

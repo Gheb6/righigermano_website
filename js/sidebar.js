@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
+    const mainContent = document.querySelector('.main-content');
+    if (!mainContent || mainContent.querySelector('.sidebar')) return;
+
     const sidebarHTML = `
     <aside class="sidebar">
         <div class="card info-card">
@@ -23,10 +26,6 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
     </aside>
     `;
-    
-    // Inserisce la sidebar alla fine del blocco principale .main-content
-    const mainContent = document.querySelector('.main-content');
-    if(mainContent) {
-        mainContent.insertAdjacentHTML('beforeend', sidebarHTML);
-    }
+
+    mainContent.insertAdjacentHTML('beforeend', sidebarHTML);
 });
