@@ -5,6 +5,11 @@
     padding: 0;
 }
 
+html, body {
+    overflow-x: hidden; /* Impedisce alla pagina di allargarsi oltre i bordi dello schermo */
+    width: 100%;
+}
+
 body {
     font-family: Arial, sans-serif, system-ui;
     color: #333;
@@ -157,6 +162,72 @@ body {
 
 .home-intro-copy h2 {
     margin-bottom: 10px;
+}
+
+.home-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin: -20px -20px 28px;
+    overflow: hidden;
+    background: #222;
+}
+
+.showcase-panel {
+    position: relative;
+    display: flex;
+    min-height: 480px;
+    overflow: hidden;
+    color: #fff;
+    text-decoration: none;
+    scroll-margin-top: 20px;
+}
+
+.showcase-panel img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1), filter 0.7s ease;
+}
+
+.showcase-panel:hover img,
+.showcase-panel:focus-visible img {
+    transform: scale(1.03);
+}
+
+.showcase-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.05) 25%, rgba(0,0,0,0.78) 100%);
+}
+
+.showcase-copy {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 28px 24px;
+}
+
+.showcase-copy .section-kicker {
+    margin-bottom: 8px !important;
+    color: #fff;
+    font-size: 0.7rem !important;
+}
+
+.showcase-copy strong {
+    font-size: clamp(1.35rem, 2.2vw, 2.1rem);
+    line-height: 1.1;
+}
+
+.showcase-copy > span:last-child {
+    margin-top: 8px;
+    color: rgba(255,255,255,0.82);
+    font-size: 0.9rem;
 }
 
 .section-kicker {
@@ -390,8 +461,8 @@ body {
 }
 
 .contact-card {
-    margin: 25px 0;
-    padding: 20px;
+    margin: 25px 0 30px;
+    padding: 24px;
     background: #f9f9f9;
     border-left: 4px solid #b00000;
     border-radius: 4px;
@@ -403,6 +474,55 @@ body {
 
 .contact-card p {
     margin-bottom: 8px;
+}
+
+.contact-address {
+    color: #555;
+    margin-top: 14px;
+}
+
+.contact-details {
+    margin: 20px 0;
+    padding: 16px 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.contact-details a {
+    color: #1565c0;
+    text-decoration: underline;
+}
+
+.contact-details p:first-child a {
+    color: #b00000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-actions {
+    margin-top: 20px;
+}
+
+.contact-context {
+    display: grid;
+    gap: 20px;
+    margin: 30px 0;
+    padding: 22px;
+    background: #f6f3ed;
+    border: 1px solid #e5e1d8;
+    border-radius: 6px;
+}
+
+.contact-context h3 {
+    margin-top: 0;
+}
+
+.contact-context p {
+    margin-bottom: 10px;
+}
+
+.contact-reference-title {
+    margin-top: 30px !important;
 }
 
 /* Stile Pulsanti Interattivi */
@@ -450,6 +570,15 @@ body {
 
 .btn-email:hover {
     background-color: #0d47a1;
+}
+
+.btn-instagram {
+    background-color: #7b2f68;
+    color: #fff;
+}
+
+.btn-instagram:hover {
+    background-color: #5e2450;
 }
 
 /* Footer */
@@ -793,5 +922,634 @@ body {
 
     .home-contact-strip .btn-red {
         width: 100%;
+    }
+
+    .home-showcase {
+        display: grid;
+        gap: 2px;
+    }
+
+    .showcase-panel {
+        min-height: 230px;
+    }
+
+    .showcase-copy {
+        padding: 22px 18px;
+    }
+}
+
+@media (min-width: 768px) {
+    .contact-actions {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+
+    .contact-actions .btn {
+        margin: 0;
+    }
+
+    .contact-context {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .contact-context > div + div {
+        padding-left: 30px;
+        border-left: 1px solid #e5e1d8;
+    }
+}
+
+@media (min-width: 768px) {
+    .main-content {
+        display: block;
+    }
+
+    .main-content .content-body {
+        width: 100%;
+    }
+
+    .main-content .sidebar {
+        display: none;
+    }
+
+    .home-page {
+        display: block;
+    }
+
+    .home-page .content-body {
+        width: 100%;
+    }
+
+    .home-page .sidebar {
+        display: none;
+    }
+}
+
+/* Effetto zoom fluido sulle immagini delle card */
+.catalog-card,
+.home-link-card {
+    overflow: hidden;
+}
+
+.catalog-card img,
+.home-link-card img {
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.catalog-card:hover img,
+.home-link-card:hover img {
+    transform: scale(1.05);
+}
+
+.content-body,
+.sidebar,
+.catalog-card,
+.home-link-card {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.catalog-card:hover,
+.home-link-card:hover {
+    box-shadow: 0 20px 30px -10px rgba(176, 0, 0, 0.1), 0 10px 15px -5px rgba(0, 0, 0, 0.04);
+    border-color: rgba(176, 0, 0, 0.3);
+    transform: translateY(-4px);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Brand e navigazione responsive */
+.header-flex {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    gap: 20px;
+}
+
+.site-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.brand-mark {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+}
+
+.brand-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.brand-name {
+    color: #111;
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.header-cta {
+    display: inline-block;
+    padding: 9px 14px;
+    border: 1px solid #b00000;
+    border-radius: 4px;
+    color: #b00000;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.header-cta:hover {
+    background-color: #b00000;
+    color: #fff;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.home-intro-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.home-intro-actions .btn {
+    margin: 4px 0 0;
+}
+
+.trust-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 0 0 28px;
+    padding: 16px 0;
+    border-top: 1px solid #e5e1d8;
+    border-bottom: 1px solid #e5e1d8;
+}
+
+.trust-strip div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 0 12px;
+    border-right: 1px solid #e5e1d8;
+}
+
+.trust-strip div:last-child {
+    border-right: 0;
+}
+
+.trust-strip strong {
+    color: #222;
+    font-size: 0.95rem;
+}
+
+.trust-strip span {
+    color: #666;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 767px) {
+    .header-flex {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .brand-mark {
+        width: 42px;
+        height: 42px;
+    }
+
+    .brand-name {
+        font-size: 1rem;
+    }
+
+    .subtitle {
+        font-size: 0.75rem;
+    }
+
+    .header-cta {
+        display: none;
+    }
+
+    .site-nav .container {
+        padding: 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 15px;
+        border: 0;
+        background: transparent;
+        color: #fff;
+        font: inherit;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .menu-toggle-icon {
+        font-size: 1.25rem;
+        line-height: 1;
+    }
+
+    .site-nav ul {
+        display: none;
+    }
+
+    .site-nav ul.is-open {
+        display: flex;
+    }
+
+    .trust-strip {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .trust-strip div {
+        padding: 0;
+        border-right: 0;
+    }
+}
+
+
+/* --- STILE APPLE HOME IMMERSIVA --- */
+
+/* --- HERO SECTION A PIENA LARGHEZZA SENZA SCROLL ORIZZONTALE --- */
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('../img/ciclo-produttivo/finitura.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    margin-top: 0;
+    margin-bottom: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-section h2 {
+    font-size: 2.2rem;
+    margin: 10px 0 15px;
+    color: #fff;
+    letter-spacing: -0.5px;
+}
+
+.hero-section p {
+    font-size: 1.1rem;
+    color: #ddd;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.btn-outline:hover {
+    background: #fff;
+    color: #111;
+}
+
+/* Griglia Showcase */
+.section-title-center {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.apple-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.apple-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #111;
+    color: #fff;
+    text-decoration: none;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.apple-card:hover {
+    transform: translateY(-6px);
+}
+
+.apple-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: transform 0.6s ease;
+}
+
+.apple-card:hover img {
+    transform: scale(1.05);
+}
+
+.apple-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+}
+
+.apple-card-info {
+    position: relative;
+    z-index: 2;
+    padding: 25px;
+}
+
+.apple-category {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #ff5252;
+    font-weight: bold;
+}
+
+.apple-card-info h4 {
+    font-size: 1.4rem;
+    margin: 5px 0;
+    color: #fff;
+}
+
+.apple-card-info p {
+    font-size: 0.95rem;
+    color: #ccc;
+    margin: 0;
+}
+
+/* Fascia Trust / Valori */
+.apple-trust-section {
+    background: #ffffff;
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    border: 1px solid #eaeaea;
+}
+
+.trust-flex {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+}
+
+.trust-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #b00000;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.trust-item p {
+    font-size: 0.95rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Box CTA Finale */
+.apple-cta-section {
+    margin-bottom: 40px;
+}
+
+.cta-box {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.cta-box h3 {
+    color: #fff;
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+}
+
+.cta-box p {
+    color: #aaa;
+    margin: 0;
+}
+
+/* Adattamento Desktop (Tablet e PC) */
+@media (min-width: 768px) {
+    .hero-section {
+        padding: 120px 40px;
+    }
+
+    .hero-section h2 {
+        font-size: 3rem;
+    }
+
+    .apple-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .trust-flex {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cta-box {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+@media (min-width: 768px) {
+    .contact-actions {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+
+    .contact-actions .btn {
+        margin: 0;
+    }
+
+    .contact-context {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .contact-context > div + div {
+        padding-left: 30px;
+        border-left: 1px solid #e5e1d8;
+    }
+}
+
+/* --- PAGINA CONTATTI STILE MODERNO --- */
+.page-contact {
+    padding: 40px 15px 60px;
+}
+
+.contact-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 35px;
+}
+
+.contact-header h1 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    color: #111;
+    margin: 8px 0 14px;
+    letter-spacing: -0.02em;
+}
+
+.contact-lead {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.contact-main-panel {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.05);
+    padding: 30px 24px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.contact-info-block h2 {
+    font-size: 1.4rem;
+    color: #111;
+    margin-bottom: 2px;
+}
+
+.contact-location {
+    color: #666;
+    margin: 10px 0 20px;
+    font-size: 0.95rem;
+}
+
+.contact-meta-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    border-top: 1px solid #eee;
+    padding-top: 18px;
+}
+
+.contact-meta-list div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.92rem;
+}
+
+.contact-meta-list span:first-child {
+    color: #777;
+}
+
+.contact-meta-list a {
+    color: #222;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-meta-list .contact-highlight {
+    color: #b00000;
+    font-weight: 700;
+}
+
+.contact-actions-block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+.contact-actions-block .btn {
+    margin: 0;
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+.contact-bottom-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.contact-bottom-card {
+    background: #fafafa;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.contact-bottom-card h3 {
+    font-size: 1.1rem;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.contact-bottom-card p {
+    font-size: 0.92rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 6px;
+}
+
+@media (min-width: 768px) {
+    .contact-main-panel {
+        grid-template-columns: 1.2fr 1fr;
+        padding: 40px 35px;
+        align-items: center;
+    }
+
+    .contact-bottom-grid {
+        grid-template-columns: 1fr 1fr;
     }
 }

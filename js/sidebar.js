@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <div class="quick-actions">
                 <a href="tel:0522965015" class="btn btn-call">📞 Chiama 0522 965015</a>
                 <a href="mailto:info@righigermano.com" class="btn btn-email">✉️ Invia Email</a>
+                <a href="https://www.instagram.com/righigermanosnc_cementisti/" target="_blank" rel="noopener noreferrer" class="btn btn-instagram">Instagram</a>
             </div>
 
             <p style="margin-top: 15px; font-size: 0.85rem;"><strong>PEC:</strong> <a href="mailto:righigermano@pec.it">righigermano@pec.it</a></p>

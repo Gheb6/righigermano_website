@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         <footer class="site-footer">
             <div class="container">
-                <p>&copy; 2026 Righi Germano S.n.c. - Tutti i diritti riservati | <a href="${pagePrefix}privacy.html" style="color: #aaa; text-decoration: underline;">Privacy & Cookie Policy</a></p>
+                <p>&copy; 2026 Righi Germano S.n.c. - Tutti i diritti riservati | <a href="https://www.instagram.com/righigermanosnc_cementisti/" target="_blank" rel="noopener noreferrer" style="color: #aaa; text-decoration: underline;">Instagram</a> | <a href="${pagePrefix}privacy.html" style="color: #aaa; text-decoration: underline;">Privacy & Cookie Policy</a></p>
             </div>
         </footer>
         `;
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const footerOnlyHTML = `
         <footer class="site-footer">
             <div class="container">
-                <p>&copy; 2026 Righi Germano S.n.c. - Tutti i diritti riservati | <a href="${pagePrefix}privacy.html" style="color: #aaa; text-decoration: underline;">Privacy & Cookie Policy</a></p>
+                <p>&copy; 2026 Righi Germano S.n.c. - Tutti i diritti riservati | <a href="https://www.instagram.com/righigermanosnc_cementisti/" target="_blank" rel="noopener noreferrer" style="color: #aaa; text-decoration: underline;">Instagram</a> | <a href="${pagePrefix}privacy.html" style="color: #aaa; text-decoration: underline;">Privacy & Cookie Policy</a></p>
             </div>
         </footer>
         `;

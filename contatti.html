@@ -17,49 +17,72 @@
 
     <header class="site-header">
         <div class="container header-flex">
-            <div class="logo-area">
-                <img src="img/bisnonno.jpeg" alt="Il fondatore - Righi Germano" class="founder-img">
-                <div>
-                    <h1>Righi Germano s.n.c.</h1>
-                    <p class="subtitle">di Righi Massimo e Giorgio</p>
-                    <p class="tagline">L'arte nel cemento dal 1900</p>
-                </div>
-            </div>
+            <a href="index.html" class="site-brand" aria-label="Righi Germano, home">
+                <img src="loghi/Righi-02_cropped-_cropped_-_pdfresizer.com_.svg" alt="" class="brand-mark">
+                <span class="brand-copy">
+                    <span class="brand-name">Righi Germano s.n.c.</span>
+                    <span class="subtitle">di Righi Massimo e Giorgio</span>
+                </span>
+            </a>
+            <a href="prodotti/catalogo.html" class="header-cta">Esplora i Prodotti</a>
         </div>
     </header>
 
-    <main class="container main-content">
-        <section class="content-body">
-            <h2>Contatti</h2>
-            <p>Hai bisogno di informazioni su un prodotto o vuoi parlarci di una lavorazione su disegno?</p>
-            <p>Contattaci direttamente: saremo lieti di ascoltare le tue esigenze e valutare insieme la soluzione piu adatta.</p>
+    <main class="container page-contact">
+        <!-- Testata Sezione -->
+        <header class="contact-header">
+            <p class="section-kicker">Siamo a tua disposizione</p>
+            <h1>Contatta la nostra sede</h1>
+            <p class="contact-lead">Hai bisogno di informazioni tecniche su un prodotto o vuoi parlarci di un progetto su disegno? Valutiamo ogni commessa con la massima cura artigianale.</p>
+        </header>
 
-            <div class="contact-card">
-                <h3>Righi Germano S.n.c.</h3>
-                <p><strong>di Righi Massimo e Giorgio</strong></p>
-                <p>Via Pasubio 14/16/18<br>42022 Boretto (RE)</p>
+        <!-- Scheda Contatti Diretti -->
+        <section class="contact-main-panel">
+            <div class="contact-info-block">
+                <h2>Righi Germano S.n.c.</h2>
+                <p class="subtitle">di Righi Massimo e Giorgio</p>
+                <p class="contact-location">Via Pasubio 14/16/18 — 42022 Boretto (RE)</p>
 
-                <div class="quick-actions">
-                    <a href="tel:0522965015" class="btn btn-call">Chiama 0522 965015</a>
-                    <a href="mailto:info@righigermano.com" class="btn btn-email">Scrivi a info@righigermano.com</a>
+                <div class="contact-meta-list">
+                    <div>
+                        <span>Telefono</span>
+                        <a href="tel:0522965015" class="contact-highlight">0522 965015</a>
+                    </div>
+                    <div>
+                        <span>Email</span>
+                        <a href="mailto:info@righigermano.com">info@righigermano.com</a>
+                    </div>
+                    <div>
+                        <span>PEC</span>
+                        <a href="mailto:righigermano@pec.it">righigermano@pec.it</a>
+                    </div>
+                    <div>
+                        <span>Fax</span>
+                        <span>0522 964845</span>
+                    </div>
                 </div>
             </div>
 
-            <h3>Riferimenti aziendali</h3>
-            <p><strong>Codice fiscale e Partita IVA:</strong> 01560280354</p>
-            <p><strong>Fax:</strong> 0522 964845</p>
-            <p><strong>PEC:</strong> <a href="mailto:righigermano@pec.it">righigermano@pec.it</a></p>
+            <div class="contact-actions-block">
+                <a href="tel:0522965015" class="btn btn-call">Chiama 0522 965015</a>
+                <a href="mailto:info@righigermano.com" class="btn btn-email">Invia una richiesta email</a>
+                <a href="https://maps.app.goo.gl/W6F3cEfQGFLqUn2TA" target="_blank" rel="noopener noreferrer" class="btn btn-map">Visualizza su Google Maps</a>
+                <a href="https://www.instagram.com/righigermanosnc_cementisti/" target="_blank" rel="noopener noreferrer" class="btn btn-instagram">Seguici su Instagram</a>
+            </div>
         </section>
 
-        <aside class="sidebar">
-            <div class="card info-card">
-                <h3>Vieni a trovarci</h3>
-                <p>Siamo a Boretto, in provincia di Reggio Emilia.</p>
-                <a href="https://maps.app.goo.gl/W6F3cEfQGFLqUn2TA" target="_blank" rel="noopener noreferrer" class="btn btn-map">Apri in Google Maps</a>
-                <hr>
-                <p>Per richieste e preventivi puoi chiamarci oppure scriverci via email.</p>
+        <!-- Fascia Stabilimento e Note Amministrative -->
+        <section class="contact-bottom-grid">
+            <div class="contact-bottom-card">
+                <h3>Stabilimento produttivo</h3>
+                <p>La nostra area produttiva si estende su <strong>10.000 mq</strong> nella zona industriale di Boretto (RE), posizionata strategicamente tra le province di Reggio Emilia, Parma, Mantova e Cremona.</p>
             </div>
-        </aside>
+            <div class="contact-bottom-card">
+                <h3>Dati aziendali</h3>
+                <p><strong>Ragione Sociale:</strong> Righi Germano S.n.c. di Righi Massimo e Giorgio</p>
+                <p><strong>C.F. e Partita IVA:</strong> 01560280354</p>
+            </div>
+        </section>
     </main>
 
     <script src="js/menu.js"></script>
