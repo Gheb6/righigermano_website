@@ -27,58 +27,110 @@
         </div>
     </header>
 
-    <main class="container main-content">
-        <section class="content-body">
+<main class="container page-catalog">
+        <header class="catalog-header">
             <p class="section-kicker">Produzione artigianale dal 1900</p>
-            <h2>I nostri prodotti</h2>
-            <p>Manufatti in cemento e graniglia realizzati con attenzione alle proporzioni, alle finiture e alle esigenze di ogni progetto.</p>
+            <h1>Catalogo Lavorazioni e Manufatti</h1>
+            <p class="catalog-lead">Realizzazioni su misura in cemento e graniglia di marmo: dalle strutture residenziali al restauro conservativo fino ai manufatti tecnici monoblocco.</p>
+            
+            <!-- Barra filtri rapidi orizzontale per mobile e desktop -->
+            <nav class="catalog-filters" aria-label="Categorie catalogo">
+                <a href="#residenziale" class="filter-chip active">Residenziale & Scale</a>
+                <a href="#architettura" class="filter-chip">Restauro & Colonne</a>
+                <a href="#tecnici" class="filter-chip">Manufatti Tecnici</a>
+            </nav>
+        </header>
 
-            <div class="catalog-grid">
-                <a href="davanzali.html" class="catalog-card">
-                    <img src="../img/catalogo/davanzali/davanzale-graniglia-bianca.webp" alt="Davanzale in graniglia e cemento bianco" loading="lazy" decoding="async">
-                    <div class="catalog-card-content">
-                        <h3>Davanzali</h3>
-                        <p>Graniglie, forme personalizzate e soluzioni su misura per ogni serramento.</p>
-                    </div>
-                </a>
-                <a href="scale.html" class="catalog-card">
-                    <img src="../img/catalogo/scale/gradini-dopo.webp" alt="Gradini in graniglia dopo un intervento di recupero" loading="lazy" decoding="async">
-                    <div class="catalog-card-content">
-                        <h3>Scale</h3>
-                        <p>Gradini su misura, recuperi e finiture per scale nuove o da rinnovare.</p>
-                    </div>
-                </a>
-                <a href="contatori.html" class="catalog-card">
-                    <img src="../img/catalogo/contatori/nicchia-contatori-gas.webp" alt="Nicchia contatori GAS unificati su misura in monoblocco" loading="lazy" decoding="async">
-                    <div class="catalog-card-content">
-                        <h3>Alloggi contatori</h3>
-                        <p>Nicchie su misura con sportelli ermetici e serrature con chiave unificata.</p>
-                    </div>
-                </a>
-                <a href="colonne-balaustre.html" class="catalog-card">
-                    <img src="../img/catalogo/colonne-balaustre/colonne-balaustre.webp" alt="Colonne e balaustre in cemento e graniglia" loading="lazy" decoding="async">
-                    <div class="catalog-card-content">
-                        <h3>Colonne e balaustre</h3>
-                        <p>Soluzioni standard e forme personalizzate realizzate su disegno e misura.</p>
-                    </div>
-                </a>
-                <a href="speciali.html" class="catalog-card">
-                    <img src="../img/catalogo/speciali/municipio-trecasali/dopo1.webp" alt="Cornici del Municipio di Trecasali dopo il recupero" loading="lazy" decoding="async">
-                    <div class="catalog-card-content">
-                        <h3>Lavori speciali</h3>
-                        <p>Ricostruzioni e creazioni uniche eseguite su disegno e per esigenze specifiche.</p>
-                    </div>
-                </a>
+        <!-- Gruppo 1: Residenziale & Scale -->
+        <section id="residenziale" class="catalog-category-group">
+            <div class="category-heading">
+                <h2>Edilizia Residenziale & Scale</h2>
+                <p>Elementi su misura e recuperi conservativi per interni ed esterni.</p>
             </div>
+            <div class="catalog-compact-grid">
+                <a href="scale.html" class="catalog-compact-card">
+                    <div class="card-img-wrap">
+                        <img src="../img/catalogo/scale/gradini-dopo.webp" alt="Scale e gradini su misura" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3>Scale e Gradini</h3>
+                        <p>Recupero vecchie scale, finiture levigate, bocciardate e trattamenti antiscivolo.</p>
+                        <span class="card-link-label">Vedi lavorazioni &rarr;</span>
+                    </div>
+                </a>
 
-            <div class="home-contact-strip">
-                <div>
-                    <h3>Hai un progetto da valutare?</h3>
-                    <p>Forma, dimensioni e finiture possono essere studiate insieme.</p>
-                </div>
-                <a href="../contatti.html" class="btn btn-red">Contattaci</a>
+                <a href="davanzali.html" class="catalog-compact-card">
+                    <div class="card-img-wrap">
+                        <img src="../img/catalogo/davanzali/davanzale-graniglia-bianca.webp" alt="Davanzali in graniglia" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3>Davanzali</h3>
+                        <p>Graniglie pregiate, forme personalizzate e soluzioni su misura per ogni serramento.</p>
+                        <span class="card-link-label">Vedi lavorazioni &rarr;</span>
+                    </div>
+                </a>
             </div>
         </section>
+
+        <!-- Gruppo 2: Restauro & Architettura -->
+        <section id="architettura" class="catalog-category-group">
+            <div class="category-heading">
+                <h2>Restauro & Architettura</h2>
+                <p>Ricostruzioni fedeli, calchi d'epoca e manufatti decorativi su disegno.</p>
+            </div>
+            <div class="catalog-compact-grid">
+                <a href="speciali.html" class="catalog-compact-card">
+                    <div class="card-img-wrap">
+                        <img src="../img/catalogo/speciali/municipio-trecasali/dopo1.webp" alt="Lavori speciali e su misura" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3>Lavori Speciali</h3>
+                        <p>Pezzi unici, ricostruzioni di elementi deteriorati e realizzazioni ex novo su disegno tecnico.</p>
+                        <span class="card-link-label">Vedi lavorazioni &rarr;</span>
+                    </div>
+                </a>
+
+                <a href="colonne-balaustre.html" class="catalog-compact-card">
+                    <div class="card-img-wrap">
+                        <img src="../img/catalogo/colonne-balaustre/colonne-balaustre.webp" alt="Colonne e balaustre" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3>Colonne e Balaustre</h3>
+                        <p>Elementi classici e contemporanei per porticati, terrazze e recinzioni d'arredo.</p>
+                        <span class="card-link-label">Vedi lavorazioni &rarr;</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Gruppo 3: Tecnici -->
+        <section id="tecnici" class="catalog-category-group">
+            <div class="category-heading">
+                <h2>Manufatti Tecnici & Servizi</h2>
+                <p>Soluzioni monoblocco a norme unificate per cantiere e impianti.</p>
+            </div>
+            <div class="catalog-compact-grid">
+                <a href="contatori.html" class="catalog-compact-card">
+                    <div class="card-img-wrap">
+                        <img src="../img/catalogo/contatori/nicchia-contatori-gas.webp" alt="Alloggi contatori" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3>Alloggi Contatori Monoblocco</h3>
+                        <p>Nicchie gas/acqua a norme unificate con sportelli ermetici e serrature certificate.</p>
+                        <span class="card-link-label">Vedi lavorazioni &rarr;</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- CTA Finale unificata -->
+        <div class="catalog-custom-strip">
+            <div>
+                <h3>Hai una commessa su disegno o un capitolato specifico?</h3>
+                <p>Produciamo pezzi speciali su casseforme personalizzate a partire dal progetto tecnico.</p>
+            </div>
+            <a href="../contatti.html" class="btn btn-red">Richiedi uno studio di fattibilità</a>
+        </div>
     </main>
 
     <script src="../js/menu.js"></script>
