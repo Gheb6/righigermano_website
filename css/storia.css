@@ -1,0 +1,64 @@
+/* ==========================================================================
+   PAGINA STORIA & ONORIFICENZE (storia.html)
+   ========================================================================== */
+
+/* Box Foto Storica */
+.history-photo-box {
+    text-align: center;
+    margin: 25px 0;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: var(--radius-md);
+    border: 1px solid #eeeeee;
+}
+
+.history-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Griglia Diplomi e Onorificenze */
+.honors-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 20px 0 25px;
+}
+
+.honor-card {
+    margin: 0;
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px solid #eeeeee;
+    border-radius: var(--radius-md);
+    text-align: center;
+}
+
+.honor-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+}
+
+.honor-card figcaption {
+    padding: 10px 4px 2px;
+    color: #555555;
+    font-size: 0.85rem;
+}
+
+/* Evento onorifico */
+.honor-event {
+    margin-bottom: 10px;
+}
+
+/* Adattamento Desktop (>= 768px) */
+@media (min-width: 768px) {
+    .honors-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

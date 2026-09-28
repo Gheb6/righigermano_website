@@ -1,0 +1,55 @@
+/* ==========================================================================
+   CSS VARIABLES & DESIGN TOKENS
+   Righi Germano S.n.c.
+   ========================================================================== */
+
+:root {
+    /* Palette Colori Identitaria */
+    --color-primary: #b00000;
+    --color-primary-dark: #8f0000;
+    --color-primary-light: #ff5252;
+    --color-dark: #222222;
+    --color-darker: #111111;
+    --color-light-bg: #f4f4f4;
+    --color-card-bg: #ffffff;
+    --color-card-subtle: #fafafa;
+    --color-text-main: #333333;
+    --color-text-dark: #111111;
+    --color-text-muted: #666666;
+    --color-text-light: #aaaaaa;
+    --color-border: #e2e2e2;
+    --color-border-subtle: rgba(0, 0, 0, 0.07);
+
+    /* Azioni / Bottoni Speciali */
+    --color-call: #2e7d32;
+    --color-call-hover: #1b5e20;
+    --color-email: #1565c0;
+    --color-email-hover: #0d47a1;
+    --color-instagram: #7b2f68;
+    --color-instagram-hover: #5e2450;
+    --color-youtube: #cc181e;
+    --color-youtube-hover: #b31217;
+    --color-map: #e0e0e0;
+    --color-map-hover: #cccccc;
+
+    /* Tipografia */
+    --font-sans: Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --line-height-body: 1.6;
+    --line-height-paragraph: 1.75;
+
+    /* Dimensioni & Layout */
+    --container-max-width: 1100px;
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 10px;
+    --radius-xl: 12px;
+
+    /* Ombre & Profondità */
+    --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+    --shadow-hover: 0 20px 30px -10px rgba(176, 0, 0, 0.1), 0 10px 15px -5px rgba(0, 0, 0, 0.04);
+    --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.08);
+
+    /* Transizioni */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+}

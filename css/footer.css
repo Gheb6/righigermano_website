@@ -1,0 +1,67 @@
+/* ==========================================================================
+   FOOTER & COOKIE BANNER
+   ========================================================================== */
+
+/* Footer del Sito */
+.site-footer {
+    background-color: var(--color-darker);
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.85rem;
+    margin-top: 30px;
+}
+
+/* Banner Cookie */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-dark);
+    color: #ffffff;
+    padding: 15px 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.cookie-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.cookie-content p {
+    font-size: 0.85rem;
+}
+
+.cookie-content a {
+    color: var(--color-primary-light);
+    text-decoration: underline;
+}
+
+.btn-accept {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: var(--radius-sm);
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color var(--transition-fast);
+}
+
+.btn-accept:hover {
+    background-color: var(--color-primary-dark);
+}
+
+@media (min-width: 768px) {
+    .cookie-content {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
