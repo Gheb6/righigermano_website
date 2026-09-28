@@ -11,6 +11,18 @@
     <link rel="shortcut icon" href="loghi/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="loghi/apple-touch-icon.png">
     <link rel="manifest" href="loghi/site.webmanifest">
+    <!-- Preconnect Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Open Graph / Meta Social -->
+    <meta property="og:site_name" content="Righi Germano S.n.c.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:title" content="Contatti - Righi Germano S.n.c.">
+    <meta property="og:description" content="Contatta Righi Germano S.n.c. a Boretto (RE) per informazioni su manufatti prefabbricati in cemento, lavorazioni su disegno e preventivi.">
+    <meta property="og:image" content="https://www.righigermano.com/img/ciclo-produttivo/finitura.jpg">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -71,6 +83,46 @@
             </div>
         </section>
 
+        <!-- Guida Preventivo & Invio Disegni Tecnici via Email (Sito Vetrina) -->
+        <section class="contact-project-guide">
+            <p class="section-kicker">Progetti e Preventivi su Disegno</p>
+            <h3>Come richiedere una valutazione o un preventivo su misura</h3>
+            <p>Se sei un progettista, un'impresa o un privato e hai un disegno tecnico o un'idea specifica da realizzare, puoi inviarci la tua richiesta direttamente via email. Valutiamo ogni commessa per verificarne la fattibilità tecnica ed estetica.</p>
+
+            <div class="guide-steps-grid">
+                <div class="guide-step-item">
+                    <span class="guide-step-num">1</span>
+                    <div class="guide-step-text">
+                        <strong>Disegni o Foto</strong>
+                        <span>Allega i file disponibili (PDF, DWG o foto dello stato di fatto del cantiere).</span>
+                    </div>
+                </div>
+                <div class="guide-step-item">
+                    <span class="guide-step-num">2</span>
+                    <div class="guide-step-text">
+                        <strong>Misure & Destinazione</strong>
+                        <span>Indica dimensioni indicative, quantitativi e se l'installazione è interna o esterna.</span>
+                    </div>
+                </div>
+                <div class="guide-step-item">
+                    <span class="guide-step-num">3</span>
+                    <div class="guide-step-text">
+                        <strong>Finitura Desiderata</strong>
+                        <span>Specifica colore graniglia, levigatura, bocciardatura o trattamenti protettivi.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="guide-actions">
+                <a href="mailto:info@righigermano.com?subject=Richiesta%20preventivo%20su%20disegno&amp;body=Buongiorno%20Righi%20Germano%2C%0A%0AVorrei%20richiedere%20un%20preventivo%20per%20un%20manufatto%20su%20misura.%0A%0A-%20Tipologia%20manufatto%3A%20%0A-%20Dimensioni%20approssimative%3A%20%0A-%20Destinazione%20(interno%2Festerno)%3A%20%0A-%20Finitura%20desiderata%3A%20%0A%0AAllego%20alla%20presente%20il%20disegno%20tecnico%20%2F%20foto.%0A%0ACordiali%20saluti%2C%0A" class="btn btn-red">
+                    ✉️ Componi email di richiesta preventivo
+                </a>
+                <button type="button" id="copy-email-btn" class="btn-copy-email" onclick="copyEmailToClipboard()">
+                    📋 Copia indirizzo: info@righigermano.com
+                </button>
+            </div>
+        </section>
+
         <!-- Fascia Stabilimento e Note Amministrative -->
         <section class="contact-bottom-grid">
             <div class="contact-bottom-card">
@@ -87,5 +139,26 @@
 
     <script src="js/menu.js"></script>
     <script src="js/footer.js"></script>
+    <script>
+        function copyEmailToClipboard() {
+            const email = 'info@righigermano.com';
+            const btn = document.getElementById('copy-email-btn');
+            navigator.clipboard.writeText(email).then(function() {
+                const originalText = btn.textContent;
+                btn.textContent = '✅ Indirizzo copiato negli appunti!';
+                btn.style.backgroundColor = '#d4edda';
+                btn.style.borderColor = '#c3e6cb';
+                btn.style.color = '#155724';
+                setTimeout(function() {
+                    btn.textContent = originalText;
+                    btn.style.backgroundColor = '';
+                    btn.style.borderColor = '';
+                    btn.style.color = '';
+                }, 3000);
+            }).catch(function() {
+                prompt('Copia manualmente l\'indirizzo email:', email);
+            });
+        }
+    </script>
 </body>
 </html>

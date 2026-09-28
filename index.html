@@ -8,11 +8,76 @@
     <meta name="description" content="Da quattro generazioni a Boretto (Reggio Emilia). Produzione artigianale di manufatti prefabbricati in cemento su disegno, arredo urbano, scale e lavori speciali.">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="img/loghi/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/svg+xml" href="img/loghi/favicon.svg">
-    <link rel="shortcut icon" href="img/loghi/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/loghi/apple-touch-icon.png">
-    <link rel="manifest" href="img/loghi/site.webmanifest">
+    <link rel="icon" type="image/png" href="loghi/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="loghi/favicon.svg">
+    <link rel="shortcut icon" href="loghi/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="loghi/apple-touch-icon.png">
+    <link rel="manifest" href="loghi/site.webmanifest">
+    
+    <!-- Preconnect Google Fonts per massima velocità -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Open Graph / Meta Social -->
+    <meta property="og:site_name" content="Righi Germano S.n.c.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:title" content="Righi Germano S.n.c. | Prefabbricati e Manufatti in Cemento a Boretto (RE)">
+    <meta property="og:description" content="Da quattro generazioni a Boretto (Reggio Emilia). Produzione artigianale di manufatti prefabbricati in cemento su disegno, arredo urbano, scale e lavori speciali.">
+    <meta property="og:image" content="https://www.righigermano.com/img/ciclo-produttivo/finitura.jpg">
+
+    <!-- Dati Strutturati Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["LocalBusiness", "Manufacturer"],
+      "@id": "https://www.righigermano.com/#organization",
+      "name": "Righi Germano S.n.c.",
+      "legalName": "Righi Germano S.n.c. di Righi Massimo e Giorgio",
+      "alternateName": "Fratelli Righi Cementisti",
+      "description": "Da quattro generazioni a Boretto (Reggio Emilia). Produzione artigianale di manufatti prefabbricati in cemento su disegno, arredo urbano, scale e lavori speciali.",
+      "url": "https://www.righigermano.com",
+      "logo": "https://www.righigermano.com/loghi/Righi-02_cropped-_cropped_-_pdfresizer.com_.svg",
+      "image": "https://www.righigermano.com/img/ciclo-produttivo/finitura.jpg",
+      "telephone": "+390522965015",
+      "faxNumber": "+390522964845",
+      "email": "info@righigermano.com",
+      "foundingDate": "1900",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Via Pasubio 14/16/18",
+        "addressLocality": "Boretto",
+        "addressRegion": "RE",
+        "postalCode": "42022",
+        "addressCountry": "IT"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 44.9038,
+        "longitude": 10.5512
+      },
+      "hasMap": "https://maps.app.goo.gl/W6F3cEfQGFLqUn2TA",
+      "vatID": "IT01560280354",
+      "taxID": "01560280354",
+      "sameAs": [
+        "https://www.instagram.com/righigermanosnc_cementisti/"
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "12:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "13:30",
+          "closes": "18:00"
+        }
+      ]
+    }
+    </script>
     
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -21,14 +86,14 @@
     <!-- Intestazione del sito -->
     <header class="site-header">
         <div class="container header-flex">
-            <div class="logo-area">
-                <img src="img/bisnonno.jpeg" alt="Il fondatore - Righi Germano" class="founder-img">
-                <div>
-                    <h1>Righi Germano s.n.c.</h1>
-                    <p class="subtitle">di Righi Massimo e Giorgio</p>
-                    <p class="tagline">L'arte nel cemento dal 1900</p>
-                </div>
-            </div>
+            <a href="index.html" class="site-brand" aria-label="Righi Germano, home">
+                <img src="loghi/Righi-02_cropped-_cropped_-_pdfresizer.com_.svg" alt="Righi Germano S.n.c." class="brand-mark">
+                <span class="brand-copy">
+                    <span class="brand-name">Righi Germano s.n.c.</span>
+                    <span class="subtitle">di Righi Massimo e Giorgio</span>
+                </span>
+            </a>
+            <a href="contatti.html" class="header-cta">Parliamo del tuo progetto</a>
         </div>
     </header>
 
