@@ -1,57 +1,86 @@
 /* ==========================================================================
    CSS VARIABLES & DESIGN TOKENS
-   Righi Germano S.n.c.
+   Righi Germano S.n.c. - Architettura Materica & Finezza Contemporanea
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 :root {
-    /* Palette Colori Identitaria */
-    --color-primary: #b00000;
-    --color-primary-dark: #8f0000;
-    --color-primary-light: #ff5252;
-    --color-dark: #222222;
-    --color-darker: #111111;
-    --color-light-bg: #f4f4f4;
+    /* 1. Palette Materica & Architettonica */
+    --color-primary: #b31b1b;              /* Rosso identitario nobile (cotto/rubino emiliano) */
+    --color-primary-dark: #8c1212;         /* Rosso profondo */
+    --color-primary-light: #e02f2f;        /* Rosso brillante per accenti */
+    --color-primary-subtle: rgba(179, 27, 27, 0.08);
+    --color-primary-glow: rgba(179, 27, 27, 0.18);
+
+    /* Toni Pietra, Calce & Sfondo */
+    --color-light-bg: #f8f9fa;             /* Calce bianca naturale */
+    --color-stone-bg: #f0f2f5;             /* Pietra serena chiarissima */
+    --color-stone-subtle: #eaeef2;         /* Grigio cemento leggero */
     --color-card-bg: #ffffff;
-    --color-card-subtle: #fafafa;
-    --color-text-main: #333333;
-    --color-text-dark: #111111;
-    --color-text-muted: #666666;
-    --color-text-light: #aaaaaa;
-    --color-border: #e2e2e2;
-    --color-border-subtle: rgba(0, 0, 0, 0.07);
+    --color-card-subtle: #fafbfd;
 
-    /* Azioni / Bottoni Speciali */
-    --color-call: #2e7d32;
-    --color-call-hover: #1b5e20;
-    --color-email: #1565c0;
-    --color-email-hover: #0d47a1;
-    --color-instagram: #7b2f68;
-    --color-instagram-hover: #5e2450;
+    /* Toni Antracite Minerale & Ardesia */
+    --color-dark: #161b22;                 /* Antracite minerale elegante, non nero puro */
+    --color-darker: #0d1117;               /* Ardesia scurissima e profonda */
+    --color-dark-surface: #1e2530;         /* Superficie scura per card materiche */
+    --color-dark-border: rgba(255, 255, 255, 0.1);
+
+    /* Tipografia & Contrasti */
+    --color-text-dark: #0f172a;            /* Quasi nero per titoli scolpiti */
+    --color-text-main: #334155;            /* Grigio ardesia leggibile */
+    --color-text-muted: #64748b;           /* Grigio tecnico per note e didascalie */
+    --color-text-light: #94a3b8;           /* Testo tenue su sfondi scuri */
+
+    /* Bordi & Dettagli Architettonici */
+    --color-border: #e2e8f0;
+    --color-border-subtle: rgba(15, 23, 42, 0.07);
+    --color-border-focus: rgba(179, 27, 27, 0.4);
+
+    /* Accenti Heritage & Tecnico */
+    --color-gold: #c59b27;                 /* Oro nobile per onorificenze e diplomi 1929 */
+    --color-gold-bg: rgba(197, 155, 39, 0.1);
+    --color-blueprint: #2563eb;
+
+    /* Azioni / Canali */
+    --color-call: #1e7e34;
+    --color-call-hover: #155d27;
+    --color-email: #0f56b3;
+    --color-email-hover: #0a3d82;
+    --color-instagram: #8a3ab9;
+    --color-instagram-hover: #67268d;
     --color-youtube: #cc181e;
-    --color-youtube-hover: #b31217;
-    --color-map: #e0e0e0;
-    --color-map-hover: #cccccc;
+    --color-youtube-hover: #a11217;
+    --color-map: #e9ecef;
+    --color-map-hover: #dee2e6;
 
-    /* Tipografia Contemporanea */
-    --font-sans: 'Plus Jakarta Sans', Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    --line-height-body: 1.6;
+    /* 2. Tipografia Contemporanea & Blueprint */
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-mono: 'Space Grotesk', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    --line-height-tight: 1.15;
+    --line-height-heading: 1.25;
+    --line-height-body: 1.65;
     --line-height-paragraph: 1.75;
 
-    /* Dimensioni & Layout */
-    --container-max-width: 1100px;
-    --radius-sm: 4px;
-    --radius-md: 6px;
-    --radius-lg: 10px;
-    --radius-xl: 12px;
+    /* 3. Dimensioni & Layout Architettonico */
+    --container-max-width: 1240px;
+    --container-narrow-width: 860px;
+    --radius-xs: 4px;
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --radius-xl: 22px;
+    --radius-pill: 9999px;
 
-    /* Ombre & Profondità */
-    --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
-    --shadow-hover: 0 20px 30px -10px rgba(176, 0, 0, 0.1), 0 10px 15px -5px rgba(0, 0, 0, 0.04);
-    --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.08);
+    /* 4. Ombreggiature Morbide & Profondità */
+    --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05), 0 1px 2px rgba(15, 23, 42, 0.03);
+    --shadow-card: 0 10px 30px -5px rgba(15, 23, 42, 0.05), 0 4px 12px -2px rgba(15, 23, 42, 0.02);
+    --shadow-hover: 0 20px 35px -8px rgba(15, 23, 42, 0.1), 0 8px 16px -4px rgba(179, 27, 27, 0.06);
+    --shadow-elevated: 0 25px 50px -12px rgba(15, 23, 42, 0.2);
+    --shadow-glow: 0 0 35px rgba(179, 27, 27, 0.25);
 
-    /* Transizioni */
-    --transition-fast: 0.2s ease;
-    --transition-normal: 0.3s ease;
+    /* 5. Transizioni Fluidi */
+    --transition-fast: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }

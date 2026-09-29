@@ -1,191 +1,450 @@
 /* ==========================================================================
-   HEADER & NAVIGATION
+   HEADER & OFF-CANVAS LATERAL DRAWER
+   Design Immersivo, Trasparente & Menù Editoriale a Scomparsa
+   Coerente su Tutte le Pagine del Sito
    ========================================================================== */
 
-/* Header del Sito */
+/* --------------------------------------------------------------------------
+   1. HEADER GLOBALE (STICKY SU PAGINE INTERNE, TRASPARENTE SU HOME)
+   -------------------------------------------------------------------------- */
 .site-header {
-    background-color: #ffffff;
-    padding: 20px 0 25px;
-    border-bottom: 3px solid var(--color-primary);
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: var(--color-darker);
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    transition: background-color var(--transition-normal), 
+                backdrop-filter var(--transition-normal), 
+                padding var(--transition-normal),
+                box-shadow var(--transition-normal);
+}
+
+/* Sulla Home Page: inizia 100% trasparente e flottante sopra la Hero 100vh */
+body.page-home .site-header {
+    position: fixed;
+    background: transparent;
+    padding: 24px 0;
+    border-bottom: 1px solid transparent;
+    box-shadow: none;
+}
+
+/* Quando si scorre sulla Home Page oltre la Hero */
+body.page-home .site-header.is-scrolled {
+    background: rgba(13, 17, 23, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.35);
 }
 
 .header-flex {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    text-align: left;
 }
 
-/* Brand & Logo */
+/* Brand & Logo - Versione Chiara per Sfondo Scuro/Immersivo */
 .site-brand {
     display: flex;
     align-items: center;
-    gap: 12px;
-    color: inherit;
+    gap: 14px;
+    color: #ffffff;
     text-decoration: none;
+    transition: opacity var(--transition-fast);
+}
+
+.site-brand:hover {
+    opacity: 0.9;
 }
 
 .brand-mark {
-    width: 52px;
-    height: 52px;
+    width: 44px;
+    height: 44px;
     object-fit: contain;
+    filter: brightness(0) invert(1);
+    transition: transform var(--transition-normal);
+}
+
+.site-brand:hover .brand-mark {
+    transform: scale(1.05);
 }
 
 .brand-copy {
     display: flex;
     flex-direction: column;
-    gap: 1px;
 }
 
 .brand-name {
-    color: var(--color-text-dark);
-    font-size: 1.35rem;
-    font-weight: 700;
-    letter-spacing: 0.02em;
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
     text-transform: uppercase;
+    line-height: 1.15;
 }
 
-.subtitle {
-    font-size: 0.9rem;
-    color: #555555;
+.brand-name .brand-dot {
+    color: var(--color-primary-light);
 }
 
-.tagline {
-    font-size: 0.95rem;
-    font-weight: bold;
-    color: var(--color-primary);
-    margin-top: 5px;
+.brand-subtitle {
+    font-size: 0.74rem;
+    color: #94a3b8;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    margin-top: 2px;
 }
 
-/* Fallback logo-area (prima dell'esecuzione dello script del menu) */
-.logo-area {
+/* Azioni a Destra nell'Header */
+.header-right-actions {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    gap: 15px;
+    gap: 16px;
 }
 
-.founder-img {
-    width: 100%;
-    max-width: 220px;
-    height: auto;
-    object-fit: cover;
-    border-radius: var(--radius-md);
-    border: 2px solid #cccccc;
-    box-shadow: var(--shadow-sm);
-}
-
-/* Pulsante CTA Header */
-.header-cta {
-    display: inline-block;
-    padding: 9px 14px;
-    border: 1px solid var(--color-primary);
-    border-radius: var(--radius-sm);
-    color: var(--color-primary);
-    font-size: 0.85rem;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background-color var(--transition-fast), color var(--transition-fast);
-}
-
-.header-cta:hover {
-    background-color: var(--color-primary);
-    color: #ffffff;
-}
-
-/* Barra di Navigazione */
-.site-nav {
-    background-color: var(--color-dark);
-}
-
-.site-nav ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-}
-
-.site-nav li a {
-    display: block;
-    color: #ffffff;
-    padding: 12px 15px;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: background var(--transition-normal);
-}
-
-.site-nav li a:hover,
-.site-nav li a.active {
-    background-color: var(--color-primary);
-}
-
-.menu-toggle {
+.header-pill-contact {
     display: none;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: var(--radius-pill);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all var(--transition-fast);
 }
 
-/* Adattamento Mobile (<768px) */
-@media (max-width: 767px) {
-    .site-header {
-        padding: 15px 0;
-    }
+.header-pill-contact:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: #ffffff;
+    color: #ffffff;
+}
 
-    .brand-mark {
-        width: 42px;
-        height: 42px;
-    }
+/* Pulsante Trigger Menu Laterale */
+.drawer-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(22, 27, 34, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #ffffff;
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 10px 18px;
+    border-radius: var(--radius-pill);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
 
-    .brand-name {
-        font-size: 1rem;
-    }
+.drawer-trigger:hover {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 20px rgba(179, 27, 27, 0.4);
+    transform: translateY(-1px);
+}
 
-    .subtitle {
-        font-size: 0.75rem;
-    }
+.drawer-trigger-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 20px;
+}
 
-    .header-cta {
+.drawer-trigger-icon .line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    transition: transform var(--transition-fast), width var(--transition-fast);
+    border-radius: 2px;
+}
+
+.drawer-trigger:hover .line-2 {
+    width: 70%;
+}
+
+/* --------------------------------------------------------------------------
+   2. BACKDROP & DRAWER LATERALE A SCOMPARSA (OFF-CANVAS)
+   -------------------------------------------------------------------------- */
+.drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 13, 18, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.drawer-backdrop.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.offcanvas-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: min(520px, 94vw);
+    height: 100vh;
+    height: 100dvh;
+    background: var(--color-darker);
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: -15px 0 50px rgba(0, 0, 0, 0.5);
+    z-index: 2001;
+    transform: translateX(105%);
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.offcanvas-drawer.is-active {
+    transform: translateX(0);
+}
+
+/* Header interno del Drawer */
+.drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 32px 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.drawer-brand-name {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+}
+
+.drawer-brand-name span {
+    color: var(--color-primary-light);
+}
+
+.drawer-close-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #cbd5e1;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 8px 14px;
+    border-radius: var(--radius-pill);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.drawer-close-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.drawer-close-btn svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* Corpo Navigazione Editoriale */
+.drawer-body {
+    padding: 32px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.drawer-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.drawer-nav-item {
+    position: relative;
+}
+
+.drawer-nav-link {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 14px;
+    border-radius: var(--radius-md);
+    transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.drawer-nav-link:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateX(6px);
+}
+
+.drawer-nav-link.active {
+    background: var(--color-primary-subtle);
+    border-left: 3px solid var(--color-primary-light);
+}
+
+.drawer-nav-num {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-primary-light);
+    letter-spacing: 0.05em;
+}
+
+.drawer-nav-label {
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #f1f5f9;
+}
+
+.drawer-nav-link:hover .drawer-nav-label {
+    color: #ffffff;
+}
+
+/* Sottolink per il catalogo */
+.drawer-sublinks {
+    list-style: none;
+    padding: 4px 0 8px 48px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.drawer-sublinks a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color var(--transition-fast), transform var(--transition-fast);
+    display: inline-block;
+}
+
+.drawer-sublinks a:hover {
+    color: #ffffff;
+    transform: translateX(4px);
+}
+
+.drawer-sublinks a.active {
+    color: var(--color-primary-light);
+    font-weight: 700;
+}
+
+/* Footer all'interno del Drawer (Contatti, Stabilimento, Orari) */
+.drawer-footer {
+    padding: 28px 32px 36px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(13, 17, 23, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.drawer-footer-title {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 4px;
+}
+
+.drawer-contact-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.86rem;
+    color: #cbd5e1;
+    line-height: 1.5;
+}
+
+.drawer-contact-block a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color var(--transition-fast);
+}
+
+.drawer-contact-block a:hover {
+    color: var(--color-primary-light);
+}
+
+.drawer-btn-cta {
+    display: block;
+    text-align: center;
+    background: var(--color-primary);
+    color: #ffffff;
+    padding: 13px 20px;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background-color var(--transition-fast), transform var(--transition-fast);
+    box-shadow: 0 4px 15px rgba(179, 27, 27, 0.4);
+}
+
+.drawer-btn-cta:hover {
+    background: var(--color-primary-dark);
+    transform: translateY(-1px);
+}
+
+/* Responsività */
+@media (min-width: 768px) {
+    .header-pill-contact {
+        display: inline-flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-subtitle {
         display: none;
     }
 
-    .site-nav .container {
-        padding: 0;
+    .drawer-nav-label {
+        font-size: 1.15rem;
     }
 
-    .menu-toggle {
-        display: flex;
-        width: 100%;
-        align-items: center;
-        justify-content: space-between;
-        padding: 12px 15px;
-        border: 0;
-        background: transparent;
-        color: #ffffff;
-        font: inherit;
-        font-weight: bold;
-        cursor: pointer;
+    .drawer-body {
+        padding: 24px 20px;
     }
 
-    .menu-toggle-icon {
-        font-size: 1.25rem;
-        line-height: 1;
+    .drawer-header {
+        padding: 20px 20px;
     }
 
-    .site-nav ul {
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .site-nav ul.is-open {
-        display: flex;
-    }
-
-    .site-nav li a {
-        border-bottom: 1px solid #444444;
-        padding: 11px 15px;
-        text-align: center;
+    .drawer-footer {
+        padding: 20px;
     }
 }

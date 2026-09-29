@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Ottimizzazione SEO -->
-    <title>Righi Germano S.n.c. | Prefabbricati e Manufatti in Cemento a Boretto (RE)</title>
-    <meta name="description" content="Da quattro generazioni a Boretto (Reggio Emilia). Produzione artigianale di manufatti prefabbricati in cemento su disegno, arredo urbano, scale e lavori speciali.">
     
-    <!-- Favicon -->
+    <!-- Ottimizzazione SEO Corporate -->
+    <title>Righi Germano S.n.c. | Manufatti e Calcestruzzo Architettonico dal 1900 | Boretto (RE)</title>
+    <meta name="description" content="Da oltre 125 anni a Boretto (Reggio Emilia). Produzione su misura di prefabbricati e manufatti in cemento e graniglia di marmo: scale, davanzali, balaustre e restauro monumentale. Stabilimento di 10.000 mq.">
+    <link rel="canonical" href="https://www.righigermano.com/">
+    
+    <!-- Favicon & Manifest -->
     <link rel="icon" type="image/png" href="loghi/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/svg+xml" href="loghi/favicon.svg">
     <link rel="shortcut icon" href="loghi/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="loghi/apple-touch-icon.png">
     <link rel="manifest" href="loghi/site.webmanifest">
     
-    <!-- Preconnect Google Fonts per massima velocità -->
+    <!-- Preconnect Google Fonts per massima resa e velocità -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -22,11 +24,12 @@
     <meta property="og:site_name" content="Righi Germano S.n.c.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="it_IT">
-    <meta property="og:title" content="Righi Germano S.n.c. | Prefabbricati e Manufatti in Cemento a Boretto (RE)">
-    <meta property="og:description" content="Da quattro generazioni a Boretto (Reggio Emilia). Produzione artigianale di manufatti prefabbricati in cemento su disegno, arredo urbano, scale e lavori speciali.">
+    <meta property="og:title" content="Righi Germano S.n.c. | Calcestruzzo Architettonico e Manufatti dal 1900">
+    <meta property="og:description" content="Manufatti prefabbricati in cemento e graniglia di marmo, scale autoportanti, restauro conservativo e pezzi su disegno. Stabilimento di 10.000 mq a Boretto (RE).">
+    <meta property="og:url" content="https://www.righigermano.com/">
     <meta property="og:image" content="https://www.righigermano.com/img/ciclo-produttivo/finitura.jpg">
 
-    <!-- Dati Strutturati Schema.org JSON-LD -->
+    <!-- Dati Strutturati Schema.org JSON-LD (Corporate & Manufacturer) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -35,7 +38,7 @@
       "name": "Righi Germano S.n.c.",
       "legalName": "Righi Germano S.n.c. di Righi Massimo e Giorgio",
       "alternateName": "Fratelli Righi Cementisti",
-      "description": "Da quattro generazioni a Boretto (Reggio Emilia). Produzione artigianale di manufatti prefabbricati in cemento su disegno, arredo urbano, scale e lavori speciali.",
+      "description": "Da quattro generazioni a Boretto (Reggio Emilia). Produzione artigianale e industriale di manufatti prefabbricati in cemento su disegno, graniglia di marmo, arredo urbano, scale e restauro monumentale.",
       "url": "https://www.righigermano.com",
       "logo": "https://www.righigermano.com/loghi/Righi-02_cropped-_cropped_-_pdfresizer.com_.svg",
       "image": "https://www.righigermano.com/img/ciclo-produttivo/finitura.jpg",
@@ -81,110 +84,613 @@
     
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="apple-style-home">
+<body class="page-home">
 
-    <!-- Intestazione del sito -->
-    <header class="site-header">
+    <!-- ====================================================================
+         HEADER FLOTTANTE TRASPARENTE & IMMERSIVO
+         ==================================================================== -->
+    <header class="site-header" id="site-header">
         <div class="container header-flex">
-            <a href="index.html" class="site-brand" aria-label="Righi Germano, home">
-                <img src="loghi/Righi-02_cropped-_cropped_-_pdfresizer.com_.svg" alt="Righi Germano S.n.c." class="brand-mark">
-                <span class="brand-copy">
-                    <span class="brand-name">Righi Germano s.n.c.</span>
-                    <span class="subtitle">di Righi Massimo e Giorgio</span>
-                </span>
+            
+            <!-- Logo & Brand Minimale -->
+            <a href="index.html" class="site-brand" aria-label="Righi Germano S.n.c., Home page">
+                <img src="loghi/Righi-02_cropped-_cropped_-_pdfresizer.com_.svg" alt="Logo Righi Germano S.n.c." class="brand-mark">
+                <div class="brand-copy">
+                    <span class="brand-name">Righi Germano<span class="brand-dot">.</span></span>
+                    <span class="brand-subtitle">Calcestruzzo Architettonico dal 1900</span>
+                </div>
             </a>
-            <a href="contatti.html" class="header-cta">Parliamo del tuo progetto</a>
+
+            <!-- Azioni Header: Solo Pillola Discreta e Trigger Menu Laterale -->
+            <div class="header-right-actions">
+                <a href="contatti.html" class="header-pill-contact">
+                    Ufficio Tecnico
+                </a>
+                <button type="button" class="drawer-trigger" id="drawer-trigger" aria-label="Apri Menu di Navigazione" aria-expanded="false" aria-controls="offcanvas-drawer">
+                    <span class="drawer-trigger-text">MENU</span>
+                    <span class="drawer-trigger-icon" aria-hidden="true">
+                        <span class="line line-1"></span>
+                        <span class="line line-2"></span>
+                    </span>
+                </button>
+            </div>
+
         </div>
     </header>
 
-    <!-- Contenuto Principale con Flusso Verticale Immersivo -->
+    <!-- ====================================================================
+         MENÙ LATERALE A SCOMPARSA (OFF-CANVAS DRAWER)
+         ==================================================================== -->
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
+    <aside class="offcanvas-drawer" id="offcanvas-drawer" aria-label="Menù di Navigazione Principale">
+        
+        <div class="drawer-header">
+            <span class="drawer-brand-name">Righi Germano<span>.</span></span>
+            <button type="button" class="drawer-close-btn" id="drawer-close-btn" aria-label="Chiudi Menù">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                <span>Chiudi</span>
+            </button>
+        </div>
+
+        <div class="drawer-body">
+            <ul class="drawer-nav-list">
+                <li class="drawer-nav-item">
+                    <a href="index.html" class="drawer-nav-link active">
+                        <span class="drawer-nav-num">01</span>
+                        <span class="drawer-nav-label">Home</span>
+                    </a>
+                </li>
+                <li class="drawer-nav-item">
+                    <a href="prodotti/catalogo.html" class="drawer-nav-link">
+                        <span class="drawer-nav-num">02</span>
+                        <span class="drawer-nav-label">Catalogo Manufatti</span>
+                    </a>
+                    <ul class="drawer-sublinks">
+                        <li><a href="prodotti/scale.html">&mdash; Scale e Gradini Autoportanti</a></li>
+                        <li><a href="prodotti/davanzali.html">&mdash; Davanzali e Soglie a Taglio Termico</a></li>
+                        <li><a href="prodotti/colonne-balaustre.html">&mdash; Colonne, Balaustre e Modanature</a></li>
+                        <li><a href="prodotti/contatori.html">&mdash; Vani Contatore Monoblocco</a></li>
+                    </ul>
+                </li>
+                <li class="drawer-nav-item">
+                    <a href="prodotti/speciali.html" class="drawer-nav-link">
+                        <span class="drawer-nav-num">03</span>
+                        <span class="drawer-nav-label">Lavori Speciali & Restauro</span>
+                    </a>
+                </li>
+                <li class="drawer-nav-item">
+                    <a href="ciclo-produttivo.html" class="drawer-nav-link">
+                        <span class="drawer-nav-num">04</span>
+                        <span class="drawer-nav-label">Ciclo Produttivo & Graniglie</span>
+                    </a>
+                </li>
+                <li class="drawer-nav-item">
+                    <a href="storia.html" class="drawer-nav-link">
+                        <span class="drawer-nav-num">05</span>
+                        <span class="drawer-nav-label">La Nostra Storia (dal 1900)</span>
+                    </a>
+                </li>
+                <li class="drawer-nav-item">
+                    <a href="contatti.html" class="drawer-nav-link">
+                        <span class="drawer-nav-num">06</span>
+                        <span class="drawer-nav-label">Contatti & Stabilimento</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="drawer-footer">
+            <span class="drawer-footer-title">STABILIMENTO BORETTO (RE) · 10.000 M²</span>
+            <div class="drawer-contact-block">
+                <span>Via Pasubio 14/16/18 · 42022 Boretto (RE)</span>
+                <span>Ufficio Tecnico: <a href="tel:+390522965015">+39 0522 965015</a></span>
+                <span>Email: <a href="mailto:info@righigermano.com">info@righigermano.com</a></span>
+                <span>Orari: Lun - Ven 08:00-12:00 | 13:30-18:00</span>
+            </div>
+            <a href="contatti.html" class="drawer-btn-cta">Richiedi Preventivo su Disegno &rarr;</a>
+        </div>
+
+    </aside>
+
+    <!-- ====================================================================
+         CONTENUTO PRINCIPALE
+         ==================================================================== -->
     <main>
         
-        <!-- 1. Sezione Hero / Impatto Iniziale -->
-        <section class="hero-section">
-            <div class="container hero-content">
-                <p class="section-kicker">Tradizione e Innovazione dal 1900</p>
-                <h2>L'arte nel cemento, su misura per il tuo progetto.</h2>
-                <p>Da quattro generazioni trasformiamo il cemento e la graniglia in manufatti unici, unendo la precisione artigianale alle richieste tecniche ed estetiche più esigenti.</p>
-                <div class="hero-actions">
-                    <a href="prodotti/catalogo.html" class="btn btn-red">Esplora i Prodotti</a>
-                    <a href="ciclo-produttivo.html" class="btn btn-outline">Il Ciclo Produttivo</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- 2. Sezione Vetrina / Lavorazioni in Primo Piano -->
-        <section class="apple-showcase-section">
+        <!-- 1. HERO SECTION 100% IMMERSIVA (SCHERMO INTERO) -->
+        <section class="home-hero">
             <div class="container">
-                <div class="section-title-center">
-                    <p class="section-kicker">Eccellenza artigianale</p>
-                    <h3>Soluzioni pensate per durare</h3>
-                </div>
-                
-                <div class="apple-grid">
-                    <a href="prodotti/scale.html" class="apple-card">
-                        <img src="img/catalogo/scale/gradini-dopo.webp" alt="Scale e gradini su misura">
-                        <div class="apple-card-info">
-                            <span class="apple-category">Manufatti</span>
-                            <h4>Scale e Gradini</h4>
-                            <p>Soluzioni su misura e recuperi estetici.</p>
-                        </div>
-                    </a>
+                <div class="hero-layout">
                     
-                    <a href="ciclo-produttivo.html" class="apple-card">
-                        <img src="img/ciclo-produttivo/graniglia.jpg" alt="Miscele di graniglia di marmo">
-                        <div class="apple-card-info">
-                            <span class="apple-category">Materiali</span>
-                            <h4>Graniglia e Ricerca</h4>
-                            <p>Miscele e finiture di pregio.</p>
-                        </div>
-                    </a>
+                    <div class="hero-meta-bar">
+                        <span class="blueprint-tag">
+                            <span class="dot"></span>
+                            BORETTO (RE) · 10.000 M² DI STABILIMENTO
+                        </span>
+                        <span class="section-kicker on-dark">MANIFATTURA D'ECCELLENZA DAL 1900</span>
+                    </div>
 
-                    <a href="storia.html" class="apple-card">
-                        <img src="img/bisnonno.jpeg" alt="Reparto finitura e trattamenti">
-                        <div class="apple-card-info">
-                            <span class="apple-category">Identità</span>
-                            <h4>Quattro Generazioni</h4>
-                            <p>La storia dei Fratelli Righi a Boretto.</p>
-                        </div>
-                    </a>
+                    <h1 class="hero-title">
+                        L'Arte nel Cemento.
+                        <span class="text-accent">Sartorialità Strutturale & Restauro.</span>
+                    </h1>
+
+                    <p class="hero-lead">
+                        Da oltre 125 anni e quattro generazioni trasformiamo calcestruzzo e graniglia di marmo in manufatti su misura di altissima precisione. Partner tecnico di architetti, imprese edili ed enti pubblici per opere destinate a durare nel tempo.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="prodotti/catalogo.html" class="btn-hero-primary">
+                            Esplora il Catalogo Manufatti &rarr;
+                        </a>
+                        <a href="contatti.html" class="btn-hero-secondary">
+                            Parla con l'Ufficio Tecnico
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Indicatore di Scroll Immersivo in Basso -->
+            <a href="#pilastri" class="hero-scroll-indicator" aria-label="Scorri verso le collezioni">
+                <span class="scroll-mouse">
+                    <span class="scroll-wheel"></span>
+                </span>
+                <span class="scroll-text">SCOPRI LE OPERE</span>
+            </a>
+        </section>
+
+        <!-- 2. I 4 PILASTRI DI FORZA AZIENDALE (FASCIA TRANSIZIONE) -->
+        <section class="home-section-pillars" id="pilastri">
+            <div class="container">
+                <div class="hero-pillars-grid">
+                    <div class="pillar-card">
+                        <span class="pillar-stat">1900<span class="stat-unit">+</span></span>
+                        <div class="pillar-title">125+ Anni di Storia</div>
+                        <p class="pillar-desc">Quattro generazioni di cementisti e maestria artigianale.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <span class="pillar-stat">10.000<span class="stat-unit">m²</span></span>
+                        <div class="pillar-title">Polo Produttivo</div>
+                        <p class="pillar-desc">Stabilimento attrezzato per carpenteria, getto e stoccaggio.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <span class="pillar-stat">100<span class="stat-unit">%</span></span>
+                        <div class="pillar-title">Sviluppo su Disegno</div>
+                        <p class="pillar-desc">Calcoli strutturali, casseforme dedicate e armatura certificata.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <span class="pillar-stat">Marmi<span class="stat-unit">★</span></span>
+                        <div class="pillar-title">Graniglie Pregiate</div>
+                        <p class="pillar-desc">Miscele cromatiche esclusive con inerti nobili di cava.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- 3. Sezione Territorio e Affidabilità (Fascia pulita) -->
-        <section class="apple-trust-section">
-            <div class="container trust-flex">
-                <div class="trust-item">
-                    <span class="trust-number">1900</span>
-                    <p>Fondazione storica e tramandata con passione.</p>
+        <!-- 3. SEGMENTAZIONE PER TARGET B2B & PROFESSIONISTI -->
+        <section class="home-section-target">
+            <div class="container">
+                <div class="section-header-corporate text-center">
+                    <p class="section-kicker">SOLUZIONI SU MISURA</p>
+                    <h2>Partner Industriale per Ogni Scala di Progetto</h2>
+                    <p class="section-sublead">Affianchiamo progettisti, cantieri ed enti pubblici con consulenza tecnica, campionature personalizzate e fornitura diretta con mezzi attrezzati.</p>
                 </div>
-                <div class="trust-item">
-                    <span class="trust-number">10.000 mq</span>
-                    <p>Area produttiva attrezzata a Boretto (RE).</p>
-                </div>
-                <div class="trust-item">
-                    <span class="trust-number">Su Disegno</span>
-                    <p>Massima personalizzazione per ogni commessa.</p>
+
+                <div class="target-grid">
+                    <!-- Target 1: Architetti & Progettisti -->
+                    <article class="target-card">
+                        <div>
+                            <span class="target-badge">Progettisti & Architetti</span>
+                            <h3>Studi di Architettura & Design</h3>
+                            <p class="target-intro">Libertà geometrica, texture materiche uniche e supporto specialistico fin dalle prime fasi di concept esecutivo.</p>
+                            
+                            <ul class="target-checklist">
+                                <li><span class="target-check-icon">✓</span> Formulazione cromatica e granulometrie su campione</li>
+                                <li><span class="target-check-icon">✓</span> Finiture: levigato, bocciardato, lavato, liscio a vista</li>
+                                <li><span class="target-check-icon">✓</span> Schede tecniche prestazionali e supporto voci di capitolato</li>
+                            </ul>
+                        </div>
+                        <a href="ciclo-produttivo.html" class="target-card-link">Scopri le miscele e finiture &rarr;</a>
+                    </article>
+
+                    <!-- Target 2: Imprese Edili & Cantieri -->
+                    <article class="target-card">
+                        <div>
+                            <span class="target-badge">Imprese Edili & Cantieri</span>
+                            <h3>Costruttori & Grandi Cantieri</h3>
+                            <p class="target-intro">Precisione millimetrica, manufatti autoportanti monoblocco e rispetto rigoroso dei cronoprogrammi di posa.</p>
+                            
+                            <ul class="target-checklist">
+                                <li><span class="target-check-icon">✓</span> Fornitura garantita di scale, davanzali e prefabbricati tecnici</li>
+                                <li><span class="target-check-icon">✓</span> Trasporto e scarico in cantiere con autocarri dotati di gru</li>
+                                <li><span class="target-check-icon">✓</span> Calcestruzzi ad alte prestazioni con marcatura e certificazioni</li>
+                            </ul>
+                        </div>
+                        <a href="prodotti/scale.html" class="target-card-link">Visualizza le scale e gradini &rarr;</a>
+                    </article>
+
+                    <!-- Target 3: Enti Pubblici & Restauro -->
+                    <article class="target-card">
+                        <div>
+                            <span class="target-badge">Restauro & Istituzioni</span>
+                            <h3>Beni Storici & Enti Pubblici</h3>
+                            <p class="target-intro">Riproduzione fedele di elementi deteriorati, calchi di cornici monumentali e arredo urbano resistente al tempo.</p>
+                            
+                            <ul class="target-checklist">
+                                <li><span class="target-check-icon">✓</span> Rilievo dettagliato su elementi storici e costruzione matrici</li>
+                                <li><span class="target-check-icon">✓</span> Esperienza comprovata su edifici vincolati (es. Municipio di Trecasali)</li>
+                                <li><span class="target-check-icon">✓</span> Massima durabilità agli agenti atmosferici e cicli gelo-disgelo</li>
+                            </ul>
+                        </div>
+                        <a href="prodotti/speciali.html" class="target-card-link">Esplora i restauri e lavori speciali &rarr;</a>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- 4. Sezione Contatto / Chiusura -->
-        <section class="apple-cta-section">
-            <div class="container cta-box">
-                <div>
-                    <h3>Hai un progetto o una richiesta particolare?</h3>
-                    <p>Siamo a disposizione per valutare forme, dimensioni e finiture insieme a te.</p>
+        <!-- 4. BENTO GRID: VETRINA LAVORAZIONI & MANUFATTI -->
+        <section class="home-section-showcase" id="showcase">
+            <div class="container">
+                <div class="section-header-corporate text-center">
+                    <p class="section-kicker">GAMMA MANUFATTI</p>
+                    <h2>L'Eccellenza dei Prefabbricati Righi Germano</h2>
+                    <p class="section-sublead">Dalle scale monumentali monoblocco ai davanzali a taglio termico, fino ai vani contatore tecnici: qualità senza compromessi.</p>
                 </div>
-                <a href="contatti.html" class="btn btn-red">Mettiti in contatto</a>
+
+                <div class="bento-grid">
+                    
+                    <!-- Card 1: Scale e Gradini (Featured 2-col) -->
+                    <a href="prodotti/scale.html" class="bento-item bento-featured">
+                        <img src="img/catalogo/scale/scala-levbocc.webp" alt="Scale autoportanti e gradini sagomati in cemento e graniglia" class="bento-img" loading="lazy">
+                        <div class="bento-gradient"></div>
+                        <div class="bento-content">
+                            <div class="bento-tags">
+                                <span class="bento-tag tag-accent">Strutturale</span>
+                                <span class="bento-tag">Autoportante</span>
+                                <span class="bento-tag">Levigato / Bocciardato</span>
+                            </div>
+                            <h4>Scale, Gradini e Rivestimenti</h4>
+                            <p>Realizzazione di scale interne ed esterne monoblocco, gradini sagomati a sbalzo e rivestimenti di grande impatto estetico per ville e complessi residenziali.</p>
+                            <span class="bento-arrow">Esplora la linea Scale &rarr;</span>
+                        </div>
+                    </a>
+
+                    <!-- Card 2: Davanzali e Soglie -->
+                    <a href="prodotti/davanzali.html" class="bento-item">
+                        <img src="img/catalogo/davanzali/davanzale-graniglia-bianca.webp" alt="Davanzali e soglie in graniglia di marmo bianco" class="bento-img" loading="lazy">
+                        <div class="bento-gradient"></div>
+                        <div class="bento-content">
+                            <div class="bento-tags">
+                                <span class="bento-tag">Isolamento</span>
+                                <span class="bento-tag">Taglio Termico</span>
+                            </div>
+                            <h4>Davanzali, Soglie e Coprimuro</h4>
+                            <p>Planarità millimetrica, gocciolatoi precisi e soluzioni predisposte per cappotto termico.</p>
+                            <span class="bento-arrow">Vedi Davanzali &rarr;</span>
+                        </div>
+                    </a>
+
+                    <!-- Card 3: Colonne e Balaustre -->
+                    <a href="prodotti/colonne-balaustre.html" class="bento-item">
+                        <img src="img/catalogo/colonne-balaustre/colonne-balaustre.webp" alt="Colonne, balaustre e capitelli artistici" class="bento-img" loading="lazy">
+                        <div class="bento-gradient"></div>
+                        <div class="bento-content">
+                            <div class="bento-tags">
+                                <span class="bento-tag">Classico & Moderno</span>
+                                <span class="bento-tag">Finitura Nobilitata</span>
+                            </div>
+                            <h4>Colonne, Balaustre & Porticati</h4>
+                            <p>Elementi strutturali e decorativi per recinzioni, terrazzi monumentali e portici di pregio.</p>
+                            <span class="bento-arrow">Vedi Colonne &rarr;</span>
+                        </div>
+                    </a>
+
+                    <!-- Card 4: Restauro & Pezzi Speciali -->
+                    <a href="prodotti/speciali.html" class="bento-item">
+                        <img src="img/catalogo/speciali/leone/testa-leone.webp" alt="Sculture, calchi e manufatti artistici speciali" class="bento-img" loading="lazy">
+                        <div class="bento-gradient"></div>
+                        <div class="bento-content">
+                            <div class="bento-tags">
+                                <span class="bento-tag tag-accent">Pezzo Unico</span>
+                                <span class="bento-tag">Calchi Artistici</span>
+                            </div>
+                            <h4>Lavori Speciali & Pezzi d'Arte</h4>
+                            <p>Ricostruzione di manufatti storici, sculture araldiche, vasche tattili e pezzi su matrice unica.</p>
+                            <span class="bento-arrow">Scopri i Progetti Speciali &rarr;</span>
+                        </div>
+                    </a>
+
+                    <!-- Card 5: Manufatti Tecnici Monoblocco -->
+                    <a href="prodotti/contatori.html" class="bento-item">
+                        <img src="img/catalogo/contatori/nicchia-contatori-gas.webp" alt="Vani contatore monoblocco gas e luce" class="bento-img" loading="lazy">
+                        <div class="bento-gradient"></div>
+                        <div class="bento-content">
+                            <div class="bento-tags">
+                                <span class="bento-tag">Monoblocco Tecnico</span>
+                                <span class="bento-tag">Norma EN</span>
+                            </div>
+                            <h4>Vani Contatore & Sottoservizi</h4>
+                            <p>Armadietti e nicchie monolitiche per contatori acqua, luce e gas resistenti e pronti alla posa.</p>
+                            <span class="bento-arrow">Vedi Vani Tecnici &rarr;</span>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CASE STUDY SPOTLIGHT: RESTAURO MUNICIPIO DI TRECASALI -->
+        <section class="home-section-case">
+            <div class="container">
+                <div class="case-box">
+                    <div class="case-grid">
+                        <div class="case-info">
+                            <div class="case-badge-row">
+                                <span class="case-badge badge-red">PROGETTO IN EVIDENZA</span>
+                                <span class="case-badge">RESTAURO CONSERVATIVO ISTITUZIONALE</span>
+                            </div>
+                            
+                            <h3>Ripristino Monumentale: Le Cornici del Municipio di Trecasali (PR)</h3>
+                            
+                            <p>
+                                Un intervento esemplare di recupero conservativo condotto su commissione pubblica per ripristinare le maestose cornici architettoniche deteriorate del palazzo municipale. Partendo dal rilievo delle sagome originali e costruendo matrici dedicate nella nostra falegnameria, abbiamo ricreato l'impasto cromatico e materico storico, garantendo fedeltà filologica e altissima resistenza nel tempo.
+                            </p>
+
+                            <div class="case-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Committente</span>
+                                    <strong class="spec-val">Ente Pubblico Municipale</strong>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Tipologia Intervento</span>
+                                    <strong class="spec-val">Cornici in Opera su Disegno</strong>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Materiale Utilizzato</span>
+                                    <strong class="spec-val">Miscele speciali con graniglie selezionate</strong>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Polo Produttivo</span>
+                                    <strong class="spec-val">Stabilimento Righi Germano (RE)</strong>
+                                </div>
+                            </div>
+
+                            <a href="prodotti/speciali.html#municipio-trecasali" class="target-card-link">
+                                Esplora tutti i dettagli del progetto Trecasali &rarr;
+                            </a>
+                        </div>
+
+                        <!-- Confronto Fotografico Prima / Dopo -->
+                        <div class="case-images-comparison">
+                            <div class="case-photo-card">
+                                <img src="img/catalogo/speciali/municipio-trecasali/prima.webp" alt="Stato di degrado delle cornici prima dell'intervento" loading="lazy">
+                                <span class="case-photo-label label-prima">Prima: Deteriorato</span>
+                            </div>
+                            <div class="case-photo-card">
+                                <img src="img/catalogo/speciali/municipio-trecasali/dopo1.webp" alt="Cornici restaurate e rimesse a nuovo da Righi Germano" loading="lazy">
+                                <span class="case-photo-label label-dopo">Dopo: Ripristinato</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. IL METODO & STABILIMENTO DI 10.000 MQ -->
+        <section class="home-section-process">
+            <div class="container">
+                <div class="section-header-corporate text-center">
+                    <p class="section-kicker">IL METODO PRODUTTIVO</p>
+                    <h2>Dall'Ufficio Tecnico al Cantiere: 10.000 m² di Capacità Integrata</h2>
+                    <p class="section-sublead">Ogni manufatto segue un protocollo rigoroso che unisce ingegnerizzazione strutturale, maestria artigianale nelle finiture e logistica diretta.</p>
+                </div>
+
+                <div class="process-steps-grid">
+                    
+                    <!-- Step 1 -->
+                    <div class="process-step-card">
+                        <div class="process-media">
+                            <img src="img/ciclo-produttivo/cassero.webp" alt="Carpenteria e casseforme su misura in legno" loading="lazy">
+                            <span class="process-step-number">FASE 01</span>
+                        </div>
+                        <div class="process-body">
+                            <h4>Carpenteria & Casseforme</h4>
+                            <p>Progettazione e costruzione di stampi su misura nella nostra falegnameria interna per dare vita a qualsiasi geometria architettonica.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="process-step-card">
+                        <div class="process-media">
+                            <img src="img/ciclo-produttivo/cassero-armato.webp" alt="Armatura strutturale in acciaio nervato e getto" loading="lazy">
+                            <span class="process-step-number">FASE 02</span>
+                        </div>
+                        <div class="process-body">
+                            <h4>Armatura & Calcestruzzo</h4>
+                            <p>Sagomatura di gabbie strutturali certificate e getto di calcestruzzo con additivi e vibrazione controllata per la massima densità.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="process-step-card">
+                        <div class="process-media">
+                            <img src="img/ciclo-produttivo/graniglia.jpg" alt="Miscele di graniglia di marmo di alta qualità" loading="lazy">
+                            <span class="process-step-number">FASE 03</span>
+                        </div>
+                        <div class="process-body">
+                            <h4>Graniglia & Lavorazione</h4>
+                            <p>Selezione di inerti nobili di marmo italiano e lavorazione superficiale: levigatura fine, bocciardatura o lavaggio ad acqua.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="process-step-card">
+                        <div class="process-media">
+                            <img src="img/ciclo-produttivo/stoccaggio.webp" alt="Stoccaggio nel polo di 10.000 mq e spedizione" loading="lazy">
+                            <span class="process-step-number">FASE 04</span>
+                        </div>
+                        <div class="process-body">
+                            <h4>Stagionatura & Logistica</h4>
+                            <p>Maturazione ottimale nel piazzale di stoccaggio e consegna diretta in cantiere con mezzi propri dotati di autogru per posa.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. HERITAGE & DIPLOMI STORICI (1900 - 1929) -->
+        <section class="home-section-heritage">
+            <div class="container">
+                <div class="heritage-grid">
+                    <div class="heritage-narrative">
+                        <p class="section-kicker on-gold">TRADIZIONE CENTENARIA DAL 1900</p>
+                        <h2>Quattro generazioni di continuità e passione per la materia.</h2>
+                        <p>
+                            Fondata sulle sponde del Po a Boretto agli albori del Novecento, la ditta Righi Germano ha attraversato oltre un secolo di evoluzione costruttiva italiana. Dai manufatti per la bonifica idraulica alle commesse per le ville liberty, fino all'architettura contemporanea.
+                        </p>
+                        <p>
+                            Un'eredità che continua oggi con la stessa etica del lavoro, precisione tecnica e orgoglio artigianale che hanno fatto la storia della manifattura reggiana.
+                        </p>
+                        
+                        <div class="heritage-gold-box">
+                            <p class="gold-title">★ ESPOSIZIONE MOSTRA CAMPIONARIA — FIRENZE, NOVEMBRE 1929</p>
+                            <p class="gold-desc">
+                                Insigniti del prestigioso <strong>Diploma di Gran Premio e Medaglia d'Oro</strong> e del <strong>Diploma di Membro del Giurì d'Onore</strong> per l'eccellenza e l'innovazione artistica nei manufatti in cemento.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="heritage-visuals">
+                        <figure class="heritage-card">
+                            <img src="img/onoreficenze/diploma-gran-premio.webp" alt="Diploma di Gran Premio e Medaglia d'Oro Firenze 1929" loading="lazy">
+                            <figcaption>Diploma di Gran Premio & Medaglia d'Oro (1929)</figcaption>
+                        </figure>
+                        <figure class="heritage-card">
+                            <img src="img/guido-righi.jpg" alt="Guido Righi nello stabilimento storico nel 1948" loading="lazy">
+                            <figcaption>Guido Righi nello stabilimento (Luglio 1948)</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. SEZIONE CTA CORPORATE & PREVENTIVI -->
+        <section class="home-section-cta">
+            <div class="container">
+                <div class="cta-corporate-banner">
+                    <div class="cta-flex">
+                        <div class="cta-content">
+                            <p class="section-kicker on-dark">CONSULENZA & CAPITOLATI</p>
+                            <h3>Hai un capitolato da verificare o un progetto speciale su disegno?</h3>
+                            <p>Il nostro ufficio tecnico è a completa disposizione di architetti, ingegneri, geometri e imprese per analizzare fattibilità, dettagli costruttivi, campionature cromatiche e preventivi rapidi.</p>
+                        </div>
+                        <div class="cta-buttons">
+                            <a href="contatti.html" class="btn-hero-primary">
+                                Parla con l'Ufficio Tecnico &rarr;
+                            </a>
+                            <a href="tel:+390522965015" class="btn-hero-secondary">
+                                Chiama: 0522 965015
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
     </main>
 
+    <!-- ====================================================================
+         FOOTER CORPORATE A 4 COLONNE
+         ==================================================================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <!-- Colonna 1: Brand & Dati Societari -->
+                <div class="footer-col footer-col-brand">
+                    <a href="index.html" class="footer-brand" aria-label="Righi Germano S.n.c., Home">
+                        <img src="loghi/Righi-02_cropped-_cropped_-_pdfresizer.com_.svg" alt="Righi Germano S.n.c." class="footer-logo">
+                        <span class="footer-brand-title">Righi Germano S.n.c.</span>
+                    </a>
+                    <p class="footer-desc">
+                        Produzione artigianale e industriale di manufatti prefabbricati in cemento e graniglia di marmo dal 1900. Partner di riferimento per l'architettura contemporanea, il restauro e l'edilizia su misura.
+                    </p>
+                    <div class="footer-legal-pills">
+                        <span class="footer-pill">P.IVA 01560280354</span>
+                        <span class="footer-pill">C.F. 01560280354</span>
+                        <span class="footer-pill">Stabilimento Boretto (RE)</span>
+                    </div>
+                </div>
+
+                <!-- Colonna 2: Linee di Manufatti -->
+                <div class="footer-col">
+                    <h4>Manufatti & Soluzioni</h4>
+                    <ul class="footer-links">
+                        <li><a href="prodotti/scale.html">Scale e Gradini Autoportanti</a></li>
+                        <li><a href="prodotti/davanzali.html">Davanzali e Soglie a Taglio Termico</a></li>
+                        <li><a href="prodotti/colonne-balaustre.html">Colonne, Balaustre e Modanature</a></li>
+                        <li><a href="prodotti/speciali.html">Lavorazioni Speciali & Restauro</a></li>
+                        <li><a href="prodotti/contatori.html">Vani Contatore Monoblocco</a></li>
+                        <li><a href="prodotti/catalogo.html">Tutto il Catalogo Prodotti</a></li>
+                    </ul>
+                </div>
+
+                <!-- Colonna 3: Azienda & Metodo -->
+                <div class="footer-col">
+                    <h4>Azienda & Metodo</h4>
+                    <ul class="footer-links">
+                        <li><a href="storia.html">La Nostra Storia dal 1900</a></li>
+                        <li><a href="ciclo-produttivo.html">Ciclo Produttivo & Ricerca Graniglie</a></li>
+                        <li><a href="storia.html#onoreficenze">Onorificenze e Riconoscimenti 1929</a></li>
+                        <li><a href="prodotti/speciali.html#municipio-trecasali">Restauro Municipio di Trecasali</a></li>
+                        <li><a href="privacy.html">Informativa Privacy & Trattamento Dati</a></li>
+                    </ul>
+                </div>
+
+                <!-- Colonna 4: Stabilimento & Contatti -->
+                <div class="footer-col">
+                    <h4>Stabilimento & Recapiti</h4>
+                    <ul class="footer-contact-list">
+                        <li class="footer-contact-item">
+                            <span>📍 <strong>Stabilimento & Uffici:</strong><br>Via Pasubio 14/16/18<br>42022 Boretto (RE) - Italia</span>
+                        </li>
+                        <li class="footer-contact-item">
+                            <span>📞 <strong>Telefono:</strong> <a href="tel:+390522965015">+39 0522 965015</a></span>
+                        </li>
+                        <li class="footer-contact-item">
+                            <span>📠 <strong>Fax:</strong> +39 0522 964845</span>
+                        </li>
+                        <li class="footer-contact-item">
+                            <span>✉️ <strong>Email:</strong> <a href="mailto:info@righigermano.com">info@righigermano.com</a></span>
+                        </li>
+                        <li class="footer-contact-item">
+                            <span>⏱️ <strong>Orari:</strong> Lun - Ven 08:00-12:00 | 13:30-18:00</span>
+                        </li>
+                    </ul>
+                    <a href="https://www.instagram.com/righigermanosnc_cementisti/" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+                        Seguici su Instagram &rarr;
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Barra Finale Copyright & Normativa -->
+            <div class="footer-bottom-bar">
+                <p>&copy; 2026 Righi Germano S.n.c. di Righi Massimo e Giorgio - Tutti i diritti riservati.</p>
+                <p>
+                    <a href="privacy.html">Privacy & Cookie Policy</a> · Polo Produttivo e Logistico di Boretto (Reggio Emilia)
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Modulari del Sito -->
     <script src="js/menu.js"></script>
-    <script src="js/sidebar.js"></script>
     <script src="js/footer.js"></script>
 
 </body>

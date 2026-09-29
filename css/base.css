@@ -1,8 +1,9 @@
 /* ==========================================================================
    BASE & RESET STYLES
+   Architettura, Reset e Utilities Globali
    ========================================================================== */
 
-* {
+*, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -12,6 +13,8 @@ html {
     scroll-behavior: smooth;
     overflow-x: hidden;
     width: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-size: 16px;
 }
 
 body {
@@ -21,22 +24,118 @@ body {
     line-height: var(--line-height-body);
     overflow-x: hidden;
     width: 100%;
-    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
+::selection {
+    background-color: var(--color-primary);
+    color: #ffffff;
+}
+
+/* Immagini e media responsivi */
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Contenitori e griglie */
 .container {
     width: 100%;
     max-width: var(--container-max-width);
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 20px;
 }
 
-/* Kicker testuale per sezioni */
+.container-narrow {
+    width: 100%;
+    max-width: var(--container-narrow-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Kicker testuale per sezioni e badge blueprint */
 .section-kicker {
-    margin-bottom: 6px !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px !important;
     color: var(--color-primary);
+    font-family: var(--font-mono);
     font-size: 0.78rem !important;
-    font-weight: bold;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.section-kicker::before {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 2px;
+    background-color: currentColor;
+    opacity: 0.8;
+}
+
+.section-kicker.on-dark {
+    color: var(--color-primary-light);
+}
+
+.section-kicker.on-gold {
+    color: var(--color-gold);
+}
+
+/* Intestazioni sezioni centrate ed eleganti */
+.section-header-corporate {
+    margin-bottom: 48px;
+}
+
+.section-header-corporate.text-center {
+    text-align: center;
+}
+
+.section-header-corporate h2,
+.section-header-corporate h3 {
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 800;
+    line-height: var(--line-height-heading);
+    color: var(--color-text-dark);
+    letter-spacing: -0.03em;
+    margin-bottom: 14px;
+}
+
+.section-header-corporate p.section-sublead {
+    font-size: 1.05rem;
+    color: var(--color-text-muted);
+    max-width: 720px;
+    margin: 0 auto;
+    line-height: var(--line-height-paragraph);
+}
+
+/* Badge Blueprint / Coordinate Tecniche */
+.blueprint-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: var(--radius-pill);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #ffffff;
+}
+
+.blueprint-tag .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #22c55e;
+    box-shadow: 0 0 8px #22c55e;
 }
