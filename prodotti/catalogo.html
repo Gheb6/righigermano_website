@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prodotti - Righi Germano S.n.c.</title>
-    <meta name="description" content="Scopri i prodotti Righi Germano: davanzali, scale e manufatti in cemento realizzati su misura a Boretto (RE).">
+    <title>Catalogo Lavorazioni e Manufatti in Cemento | Righi Germano S.n.c. - Boretto (RE)</title>
+    <meta name="description" content="Scopri il catalogo manufatti Righi Germano a Boretto (RE): scale su misura, davanzali a taglio termico, colonne, balaustre, contatori monoblocco e pezzi speciali.">
+    
+    <!-- Tag Canonico & SEO -->
+    <link rel="canonical" href="https://www.righigermano.com/prodotti/catalogo.html">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../loghi/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/svg+xml" href="../loghi/favicon.svg">
     <link rel="shortcut icon" href="../loghi/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="../loghi/apple-touch-icon.png">
     <link rel="manifest" href="../loghi/site.webmanifest">
+    
     <!-- Preconnect Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,13 +24,18 @@
     <meta property="og:site_name" content="Righi Germano S.n.c.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="it_IT">
-    <meta property="og:title" content="Catalogo Prodotti - Righi Germano S.n.c.">
-    <meta property="og:description" content="Scopri i prodotti Righi Germano: davanzali, scale, colonne e manufatti in cemento realizzati su misura a Boretto (RE).">
+    <meta property="og:url" content="https://www.righigermano.com/prodotti/catalogo.html">
+    <meta property="og:title" content="Catalogo Lavorazioni e Manufatti in Cemento | Righi Germano S.n.c.">
+    <meta property="og:description" content="Manufatti su misura in calcestruzzo architettonico e graniglia di marmo dal 1900 a Boretto (RE).">
     <meta property="og:image" content="https://www.righigermano.com/img/catalogo/scale/gradini-dopo.webp">
 
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+
+    <!-- ====================================================================
+         HEADER CORPORATE UNIFICATO
+         ==================================================================== -->
     <header class="site-header">
         <div class="container header-flex">
             <a href="../index.html" class="site-brand" aria-label="Righi Germano S.n.c., Home">
@@ -48,114 +58,164 @@
         </div>
     </header>
 
-<main class="container page-catalog">
+    <!-- ====================================================================
+         CONTENUTO PRINCIPALE CATALOGO
+         ==================================================================== -->
+    <main class="container page-catalog">
         <header class="catalog-header">
-            <p class="section-kicker">Produzione artigianale dal 1900</p>
+            <p class="section-kicker">PRODUZIONE ARTIGIANALE & INDUSTRIALE · DAL 1900</p>
             <h1>Catalogo Lavorazioni e Manufatti</h1>
-            <p class="catalog-lead">Realizzazioni su misura in cemento e graniglia di marmo: dalle strutture residenziali al restauro conservativo fino ai manufatti tecnici monoblocco.</p>
+            <p class="catalog-lead">
+                Realizzazioni su misura in cemento armato e graniglia di marmo: dalle strutture residenziali ad alta efficienza termica fino al restauro monumentale e ai monoblocchi tecnici certificati.
+            </p>
+
+            <div class="catalog-metrics-pills">
+                <span class="catalog-metric-pill"><span class="dot">✦</span> Manufatti su Misura</span>
+                <span class="catalog-metric-pill"><span class="dot">✦</span> Taglio del Ponte Termico</span>
+                <span class="catalog-metric-pill"><span class="dot">✦</span> Graniglie Pregiate Pure</span>
+                <span class="catalog-metric-pill"><span class="dot">✦</span> Restauro & Pezzi Unici</span>
+            </div>
             
-            <!-- Barra filtri rapidi orizzontale per mobile e desktop -->
+            <!-- Barra filtri rapidi orizzontale -->
             <nav class="catalog-filters" aria-label="Categorie catalogo">
-                <a href="#residenziale" class="filter-chip active">Residenziale & Scale</a>
-                <a href="#architettura" class="filter-chip">Restauro & Colonne</a>
-                <a href="#tecnici" class="filter-chip">Manufatti Tecnici</a>
+                <a href="#tutti" class="filter-chip active" data-filter="all">Tutti i Manufatti</a>
+                <a href="#residenziale" class="filter-chip" data-filter="residenziale">Edilizia Residenziale & Scale</a>
+                <a href="#architettura" class="filter-chip" data-filter="architettura">Restauro & Architettura</a>
+                <a href="#tecnici" class="filter-chip" data-filter="tecnici">Manufatti Tecnici & Impianti</a>
             </nav>
         </header>
 
         <!-- Gruppo 1: Residenziale & Scale -->
-        <section id="residenziale" class="catalog-category-group">
+        <section id="residenziale" class="catalog-category-group" data-category="residenziale">
             <div class="category-heading">
                 <h2>Edilizia Residenziale & Scale</h2>
-                <p>Elementi su misura e recuperi conservativi per interni ed esterni.</p>
+                <p>Elementi sagomati, isolamento termico e recuperi conservativi per interni ed esterni.</p>
             </div>
             <div class="catalog-compact-grid">
                 <a href="scale.html" class="catalog-compact-card">
                     <div class="card-img-wrap">
-                        <img src="../img/catalogo/scale/gradini-dopo.webp" alt="Scale e gradini su misura" loading="lazy">
+                        <img src="../img/catalogo/scale/gradini-dopo.webp" alt="Scale e gradini su misura in graniglia" loading="lazy">
+                        <span class="card-category-tag">Scale</span>
                     </div>
                     <div class="card-body">
-                        <h3>Scale e Gradini</h3>
-                        <p>Recupero vecchie scale, finiture levigate, bocciardate e trattamenti antiscivolo.</p>
-                        <span class="card-link-label">Vedi lavorazioni &rarr;</span>
+                        <h3>Scale e Gradini in Graniglia</h3>
+                        <p>Gradini autoportanti su cassaforma, recupero vecchie scale usurate, superfici levigate a specchio, bocciardate o con fasce antiscivolo a norma.</p>
+                        <span class="card-link-label">Esplora la scheda tecnica &rarr;</span>
                     </div>
                 </a>
 
                 <a href="davanzali.html" class="catalog-compact-card">
                     <div class="card-img-wrap">
-                        <img src="../img/catalogo/davanzali/davanzale-graniglia-bianca.webp" alt="Davanzali in graniglia" loading="lazy">
+                        <img src="../img/catalogo/davanzali/davanzale-graniglia-bianca.webp" alt="Davanzali in graniglia con taglio termico" loading="lazy">
+                        <span class="card-category-tag">Serramenti</span>
                     </div>
                     <div class="card-body">
-                        <h3>Davanzali</h3>
-                        <p>Graniglie pregiate, forme personalizzate e soluzioni su misura per ogni serramento.</p>
-                        <span class="card-link-label">Vedi lavorazioni &rarr;</span>
+                        <h3>Davanzali e Soglie a Taglio Termico</h3>
+                        <p>Graniglie di marmo nobili, taglio del ponte termico integrato contro muffe e condensa, gocciolatoi fresati e sagome millimetriche per ogni infisso.</p>
+                        <span class="card-link-label">Esplora la scheda tecnica &rarr;</span>
                     </div>
                 </a>
             </div>
         </section>
 
         <!-- Gruppo 2: Restauro & Architettura -->
-        <section id="architettura" class="catalog-category-group">
+        <section id="architettura" class="catalog-category-group" data-category="architettura">
             <div class="category-heading">
                 <h2>Restauro & Architettura</h2>
-                <p>Ricostruzioni fedeli, calchi d'epoca e manufatti decorativi su disegno.</p>
+                <p>Ricostruzioni fedeli, calchi d'epoca e manufatti decorativi d'arredo su disegno.</p>
             </div>
             <div class="catalog-compact-grid">
                 <a href="speciali.html" class="catalog-compact-card">
                     <div class="card-img-wrap">
-                        <img src="../img/catalogo/speciali/municipio-trecasali/dopo1.webp" alt="Lavori speciali e su misura" loading="lazy">
+                        <img src="../img/catalogo/speciali/municipio-trecasali/dopo1.webp" alt="Lavori speciali e restauro conservativo su disegno" loading="lazy">
+                        <span class="card-category-tag">Pezzi Unici</span>
                     </div>
                     <div class="card-body">
-                        <h3>Lavori Speciali</h3>
-                        <p>Pezzi unici, ricostruzioni di elementi deteriorati e realizzazioni ex novo su disegno tecnico.</p>
-                        <span class="card-link-label">Vedi lavorazioni &rarr;</span>
+                        <h3>Lavori Speciali e Restauro</h3>
+                        <p>Calchi in gomma siliconica, ricostruzione di elementi storici deteriorati per edifici vincolati e creazioni scultoree ex novo su disegno tecnico.</p>
+                        <span class="card-link-label">Esplora i casi studio &rarr;</span>
                     </div>
                 </a>
 
                 <a href="colonne-balaustre.html" class="catalog-compact-card">
                     <div class="card-img-wrap">
-                        <img src="../img/catalogo/colonne-balaustre/colonne-balaustre.webp" alt="Colonne e balaustre" loading="lazy">
+                        <img src="../img/catalogo/colonne-balaustre/colonne-balaustre.webp" alt="Colonne e balaustre architettoniche" loading="lazy">
+                        <span class="card-category-tag">Elementi Classici</span>
                     </div>
                     <div class="card-body">
-                        <h3>Colonne e Balaustre</h3>
-                        <p>Elementi classici e contemporanei per porticati, terrazze e recinzioni d'arredo.</p>
-                        <span class="card-link-label">Vedi lavorazioni &rarr;</span>
+                        <h3>Colonne e Balaustre Architettoniche</h3>
+                        <p>Elementi strutturali portanti con vano interno per armatura in c.a., fusti lisci o scanalati, capitelli classici e balaustre d'arredo per terrazze e ville.</p>
+                        <span class="card-link-label">Esplora la scheda tecnica &rarr;</span>
                     </div>
                 </a>
             </div>
         </section>
 
-        <!-- Gruppo 3: Tecnici -->
-        <section id="tecnici" class="catalog-category-group">
+        <!-- Gruppo 3: Manufatti Tecnici -->
+        <section id="tecnici" class="catalog-category-group" data-category="tecnici">
             <div class="category-heading">
-                <h2>Manufatti Tecnici & Servizi</h2>
-                <p>Soluzioni monoblocco a norme unificate per cantiere e impianti.</p>
+                <h2>Manufatti Tecnici & Impianti</h2>
+                <p>Soluzioni monoblocco a norme unificate per cantiere, lottizzazioni e reti tecnologiche.</p>
             </div>
             <div class="catalog-compact-grid">
                 <a href="contatori.html" class="catalog-compact-card">
                     <div class="card-img-wrap">
-                        <img src="../img/catalogo/contatori/nicchia-contatori-gas.webp" alt="Alloggi contatori" loading="lazy">
+                        <img src="../img/catalogo/contatori/nicchia-contatori-gas.webp" alt="Alloggi monoblocco per contatori gas e acqua" loading="lazy">
+                        <span class="card-category-tag">Monoblocchi</span>
                     </div>
                     <div class="card-body">
                         <h3>Alloggi Contatori Monoblocco</h3>
-                        <p>Nicchie gas/acqua a norme unificate con sportelli ermetici e serrature certificate.</p>
-                        <span class="card-link-label">Vedi lavorazioni &rarr;</span>
+                        <p>Nicchie prefabbricate per utenze Gas, Acqua ed Elettricità a norme unificate, con sportelli ermetici certificati e forometrie passatubi predisposte.</p>
+                        <span class="card-link-label">Esplora la scheda tecnica &rarr;</span>
                     </div>
                 </a>
             </div>
         </section>
 
-        <!-- CTA Finale unificata -->
+        <!-- CTA Finale Corporate -->
         <div class="catalog-custom-strip">
             <div>
-                <h3>Hai una commessa su disegno o un capitolato specifico?</h3>
-                <p>Produciamo pezzi speciali su casseforme personalizzate a partire dal progetto tecnico.</p>
+                <h3>Hai una commessa speciale su disegno o un capitolato tecnico?</h3>
+                <p>Realizziamo casseforme uniche in carpenteria e studiamo miscele di graniglia personalizzate a partire dalle tue tavole CAD o rilievi in cantiere.</p>
             </div>
-            <a href="../contatti.html" class="btn btn-red">Richiedi uno studio di fattibilità</a>
+            <div class="catalog-strip-actions">
+                <a href="../contatti.html" class="btn btn-red" style="margin: 0; padding: 12px 24px;">Richiedi Studio di Fattibilità &rarr;</a>
+                <a href="../ciclo-produttivo.html" class="btn" style="margin: 0; padding: 12px 20px; background: rgba(255,255,255,0.1); color: #ffffff; border: 1px solid rgba(255,255,255,0.2);">Scopri il Ciclo Produttivo</a>
+            </div>
         </div>
     </main>
 
+    <!-- Script Modulari del Sito (sidebar.js rimosso) -->
     <script src="../js/menu.js"></script>
-    <script src="../js/sidebar.js"></script>
     <script src="../js/footer.js"></script>
+
+    <!-- Gestione dinamica dello stato attivo dei filtri -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const filterChips = document.querySelectorAll('.catalog-filters .filter-chip');
+            const groups = document.querySelectorAll('.catalog-category-group');
+
+            filterChips.forEach(chip => {
+                chip.addEventListener('click', function(e) {
+                    const filter = this.getAttribute('data-filter');
+                    
+                    filterChips.forEach(c => c.classList.remove('active'));
+                    this.classList.add('active');
+
+                    if (filter === 'all') {
+                        groups.forEach(g => g.style.display = 'block');
+                    } else {
+                        groups.forEach(g => {
+                            if (g.getAttribute('data-category') === filter) {
+                                g.style.display = 'block';
+                            } else {
+                                g.style.display = 'none';
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

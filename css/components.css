@@ -183,18 +183,27 @@
 .prod-img {
     width: 100%;
     height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
     border-radius: var(--radius-sm);
     box-shadow: var(--shadow-sm);
+    display: block;
 }
 
 .featured-gallery .photo-card {
-    padding: 14px;
+    padding: 12px;
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+    border-radius: var(--radius-md);
 }
 
 .featured-gallery .prod-img {
-    min-height: 240px;
-    object-fit: contain;
-    background: #ffffff;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background: transparent;
 }
 
 /* Video fallback box */
@@ -251,6 +260,7 @@
     }
 
     .featured-gallery .prod-img {
-        min-height: 360px;
+        height: 280px;
+        object-fit: cover;
     }
 }

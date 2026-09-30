@@ -1,0 +1,658 @@
+/* ==========================================================================
+   PAGINA CICLO PRODUTTIVO & MATERIALI (ciclo-produttivo.html)
+   Righi Germano S.n.c. - Tecnologia Industriale & Maestria Artigianale
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. HERO SEZIONE PRODUZIONE (ARCHITETTONICO & MATERICO)
+   -------------------------------------------------------------------------- */
+.page-production-hero {
+    background-color: var(--color-darker);
+    background-image: 
+        radial-gradient(circle at 80% 20%, rgba(179, 27, 27, 0.12) 0%, transparent 60%),
+        linear-gradient(180deg, rgba(13, 17, 23, 0.96) 0%, var(--color-darker) 100%);
+    color: #ffffff;
+    padding: 70px 0 45px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+}
+
+.production-hero-content {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.page-production-hero h1 {
+    font-size: clamp(2.1rem, 4.2vw, 3.3rem);
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.18;
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
+}
+
+.page-production-hero p.production-hero-lead {
+    font-size: 1.08rem;
+    color: #cbd5e1;
+    line-height: 1.7;
+    margin: 0 auto 30px;
+}
+
+/* Badge / Pills metriche dello stabilimento */
+.production-metrics-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.production-metric-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    padding: 7px 16px;
+    border-radius: var(--radius-pill);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #f1f5f9;
+    letter-spacing: 0.03em;
+    transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.production-metric-pill:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
+}
+
+.production-metric-pill .metric-icon {
+    color: var(--color-primary-light);
+}
+
+/* --------------------------------------------------------------------------
+   2. CORPO DELLA PAGINA (SFONDO PIETRA & CONTENITORE)
+   -------------------------------------------------------------------------- */
+.page-production-main {
+    padding: 60px 0 90px;
+    background-color: var(--color-stone-bg);
+}
+
+.production-container {
+    max-width: 1020px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+/* Schede principali unificate */
+.production-card {
+    background: #ffffff;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-border);
+    padding: 38px 34px;
+    box-shadow: var(--shadow-card);
+    position: relative;
+    overflow: hidden;
+}
+
+.production-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: var(--color-primary);
+}
+
+.production-card.card-accent-gold::before {
+    background-color: var(--color-gold);
+}
+
+.production-card-header {
+    margin-bottom: 24px;
+}
+
+.production-card-header h2 {
+    font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+    font-weight: 800;
+    color: var(--color-text-dark);
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+.production-card-header p.card-intro {
+    font-size: 1.02rem;
+    color: var(--color-text-main);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   3. SEZIONE MATERIALI & GRANIGLIE (BENTO A DUE COLONNE)
+   -------------------------------------------------------------------------- */
+.materials-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.materials-text p {
+    font-size: 0.98rem;
+    color: var(--color-text-main);
+    line-height: 1.75;
+    margin-bottom: 16px;
+}
+
+.materials-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.materials-features-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.92rem;
+    color: var(--color-text-main);
+    line-height: 1.5;
+}
+
+.materials-features-list li .feat-bullet {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: var(--color-primary-subtle);
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 0.75rem;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+/* Card foto interattiva */
+.showcase-photo-box {
+    background: #fafaf9;
+    border: 1px solid #e7e5e4;
+    border-radius: var(--radius-lg);
+    padding: 16px;
+    text-align: center;
+}
+
+.showcase-photo-link {
+    display: block;
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background-color: var(--color-darker);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.showcase-photo-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.14);
+}
+
+.showcase-photo-link img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: var(--radius-md);
+    transition: transform var(--transition-smooth);
+}
+
+.showcase-photo-link:hover img {
+    transform: scale(1.02);
+}
+
+.showcase-zoom-hint {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(13, 17, 23, 0.82);
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-family: var(--font-mono);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding: 5px 10px;
+    border-radius: var(--radius-pill);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    pointer-events: none;
+    opacity: 0.9;
+}
+
+.showcase-caption {
+    font-size: 0.86rem;
+    font-family: var(--font-mono);
+    color: var(--color-text-muted);
+    margin-top: 12px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+/* --------------------------------------------------------------------------
+   4. TIMELINE DEL CICLO PRODUTTIVO (STEP 01 - 05)
+   -------------------------------------------------------------------------- */
+.production-steps-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 25px;
+}
+
+.production-step-card {
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+    align-items: center;
+    transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.production-step-card:hover {
+    border-color: rgba(179, 27, 27, 0.35);
+    box-shadow: var(--shadow-card);
+}
+
+.step-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.step-tag-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.step-badge {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    background-color: var(--color-primary-subtle);
+    padding: 4px 10px;
+    border-radius: var(--radius-pill);
+}
+
+.step-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.step-desc {
+    font-size: 0.94rem;
+    color: var(--color-text-main);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.step-media-link {
+    display: block;
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background-color: var(--color-stone-subtle);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+    transition: transform var(--transition-normal);
+}
+
+.step-media-link:hover {
+    transform: translateY(-2px);
+}
+
+.step-media-link img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-radius: var(--radius-md);
+    transition: transform var(--transition-smooth);
+}
+
+.step-media-link:hover img {
+    transform: scale(1.03);
+}
+
+/* Doppia foto per lo step armatura */
+.step-media-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.step-media-pair .step-media-link img {
+    height: 180px;
+}
+
+/* --------------------------------------------------------------------------
+   5. SEZIONE FINITURE & TRATTAMENTI SUPERFICIALI
+   -------------------------------------------------------------------------- */
+.finishes-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 25px;
+}
+
+.finishes-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+}
+
+.finish-item-card {
+    background: #fafaf9;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 16px 18px;
+    transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.finish-item-card:hover {
+    background: #ffffff;
+    border-color: var(--color-primary);
+}
+
+.finish-item-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.finish-item-icon {
+    font-size: 1.1rem;
+}
+
+.finish-item-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+}
+
+.finish-item-desc {
+    font-size: 0.88rem;
+    color: var(--color-text-main);
+    line-height: 1.55;
+    margin: 0;
+}
+
+.treatments-pills-wrap {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border);
+}
+
+.treatments-title {
+    font-size: 0.88rem;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.treatments-pills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.treatment-badge {
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-dark);
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: var(--radius-pill);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+/* --------------------------------------------------------------------------
+   6. SEZIONE LOGISTICA & CONSEGNA IN CANTIERE
+   -------------------------------------------------------------------------- */
+.logistics-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+    margin-top: 24px;
+}
+
+.logistics-card {
+    background: #fafaf9;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.logistics-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-card);
+}
+
+.logistics-img-wrap {
+    position: relative;
+    background: var(--color-darker);
+    overflow: hidden;
+}
+
+.logistics-img-wrap img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--transition-smooth);
+}
+
+.logistics-card:hover .logistics-img-wrap img {
+    transform: scale(1.02);
+}
+
+.logistics-card-body {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.logistics-card-body h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin-bottom: 8px;
+}
+
+.logistics-card-body p {
+    font-size: 0.92rem;
+    color: var(--color-text-main);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   7. SEZIONE VIDEO (SMART EMBED / FACADE)
+   -------------------------------------------------------------------------- */
+.video-showcase-panel {
+    background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-darker) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-xl);
+    padding: 38px 30px;
+    color: #ffffff;
+    box-shadow: var(--shadow-elevated);
+    text-align: center;
+}
+
+.video-showcase-header {
+    max-width: 680px;
+    margin: 0 auto 24px;
+}
+
+.video-showcase-header h2 {
+    color: #ffffff;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.video-showcase-header p {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.video-player-frame {
+    position: relative;
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    aspect-ratio: 16 / 9;
+    background: #000000;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.video-player-frame iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-actions-row {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------------------
+   8. CTA CORPORATE FINALE
+   -------------------------------------------------------------------------- */
+.production-footer-cta {
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: 38px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    box-shadow: var(--shadow-card);
+}
+
+.production-footer-cta h3 {
+    font-size: 1.35rem;
+    color: var(--color-text-dark);
+    margin-bottom: 6px;
+    font-weight: 800;
+}
+
+.production-footer-cta p {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    margin: 0;
+    max-width: 580px;
+}
+
+.production-cta-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* --------------------------------------------------------------------------
+   9. RESPONSIVE MEDIA QUERIES (DESKTOP >= 768px e >= 992px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+    .materials-layout {
+        grid-template-columns: 1.15fr 0.85fr;
+    }
+
+    .production-step-card {
+        grid-template-columns: 1.2fr 0.8fr;
+        padding: 28px;
+    }
+
+    /* Inverti direzione alternata per ritmo visivo */
+    .production-step-card.step-reversed {
+        grid-template-columns: 0.8fr 1.2fr;
+    }
+
+    .production-step-card.step-reversed .step-info {
+        order: 2;
+    }
+
+    .production-step-card.step-reversed .step-media-link,
+    .production-step-card.step-reversed .step-media-pair {
+        order: 1;
+    }
+
+    .finishes-layout {
+        grid-template-columns: 0.9fr 1.1fr;
+        align-items: center;
+    }
+
+    .finishes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .logistics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .production-footer-cta {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .production-cta-actions {
+        justify-content: flex-end;
+    }
+}
